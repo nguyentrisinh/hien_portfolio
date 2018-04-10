@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+    {% addtoblock "css" %}
+
+    {% endaddtoblock %}
+
+    <!-- Introduction -->
+    {% placeholder hero_area %}
+    <!-- End Introduction -->
+
+    <!-- About Me -->
+    {% placeholder about_me %}
+    <!-- End About Me -->
+
+    {% addtoblock "js" %}
+
+    {% endaddtoblock %}
+{% endblock content %}

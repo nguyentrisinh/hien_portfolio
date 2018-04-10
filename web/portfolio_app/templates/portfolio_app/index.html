@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load cms_tags sekizai_tags %}
+
+{% block content %}
+    {% addtoblock 'css' %}
+
+    {% endaddtoblock %}
+
+    <!-- Portfolio Section -->
+    <section class="page-section">
+        <div class="container relative">
+
+            <!-- Works Filter -->
+            <div class="works-filter font-alt align-center">
+                <a href="#" class="filter active" data-filter="*">All works</a>
+                <a href="#branding" class="filter" data-filter=".branding">Branding</a>
+                <a href="#design" class="filter" data-filter=".design">Design</a>
+                <a href="#photography" class="filter" data-filter=".photography">Photography</a>
+            </div>
+            <!-- End Works Filter -->
+
+            <!-- Works Grid -->
+            <ul class="works-grid work-grid-1 clearfix font-alt hover-white hide-titles" id="work-grid">
+                <!-- Work Item (Lightbox) -->
+                <li class="work-item mix photography">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="font-alt mt-0 mb-20">Project Details
+                                <ul class="pull-right ul-list-media-asset">
+
+                                    <li>
+                                        <a href="/" target="_blank">
+                                            <i class="portfolio-icon fa fa-globe portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/" target="_blank">
+                                            <i class="portfolio-icon fa fa-phone portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/" target="_blank">
+                                            <i class="portfolio-icon fa fa-image portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </h4>
+                        </div>
+                        <div class="col-md-4 mb-sm-50 mb-xs-30">
+                                <!-- Project Detail -->
+                                <div class="work-detail">
+                                    <div class="work-full-detail">
+                                        <p>
+                                            <strong>Client:</strong>
+                                            Envato Users
+                                        </p>
+                                        <p>
+                                            <strong>Length:</strong>
+                                            6 Months
+                                        </p>
+                                        <p>
+                                            <strong>Roles:</strong>
+                                            Developer, Technical Lead
+                                        </p>
+                                        <p>
+                                            <strong>Skills:</strong>
+                                            1th Februery, 2014
+                                        </p>
+                                        <p>
+                                            <strong>Demo:</strong>
+                                            <a href="#" target="_blank">www.rhythm.bestlooker.pro</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- End Project Detail -->
+                        </div>
+                        <div class="col-md-8 mb-sm-50 mb-xs-30 text-normal">
+                            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros ipsum, aliquam quis consequat et, ultricies eget ex. Maecenas in dapibus quam, id vulputate ex. Curabitur commodo justo a tincidunt dignissim. Maecenas pellentesque enim odio, nec dapibus eros pulvinar non. Donec congue nulla nec diam tristique, in rhoncus lectus aliquet. Phasellus dui eros, pretium quis quam ut, sodales ultricies quam. Cras tempor eros non auctor placerat. Sed eu orci turpis.</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (External Page) -->
+                <li class="work-item mix branding design">
+                    <a href="portfolio-single-1.html" class="work-ext-link">
+                        <div class="work-img">
+                            <img class="work-img" src="/static/images/portfolio/projects-2.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Vase 3D</h3>
+                            <div class="work-descr">
+                                External Page
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (External Page) -->
+                <li class="work-item mix branding">
+                    <a href="portfolio-single-1.html" class="work-ext-link">
+                        <div class="work-img">
+                            <img class="work-img" src="/static/images/portfolio/projects-3.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Boy in T-shirt</h3>
+                            <div class="work-descr">
+                                External Page
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (External Page) -->
+                <li class="work-item mix design photography">
+                    <a href="portfolio-single-1.html" class="work-ext-link">
+                        <div class="work-img">
+                            <img class="work-img" src="/static/images/portfolio/projects-4.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Space</h3>
+                            <div class="work-descr">
+                                External Page
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (External Page) -->
+                <li class="work-item mix design">
+                    <a href="portfolio-single-1.html" class="work-ext-link">
+                        <div class="work-img">
+                            <img class="work-img" src="/static/images/portfolio/projects-5.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Model</h3>
+                            <div class="work-descr">
+                                External Page
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (Lightbox) -->
+                <li class="work-item mix design branding">
+                    <a href="/static/images/portfolio/full-project-3.jpg" class="work-lightbox-link mfp-image">
+                        <div class="work-img">
+                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Young Man</h3>
+                            <div class="work-descr">
+                                Lightbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                <!-- Work Item (Lightbox) -->
+                <li class="work-item mix design branding">
+                    <a href="/static/images/portfolio/full-project-3.jpg" class="lightbox-gallery-1 mfp-image">
+                        <div class="work-img">
+                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Young Man</h3>
+                            <div class="work-descr">
+                                Lightbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+                                <!-- Work Item (Lightbox) -->
+                <li class="work-item mix design branding">
+                    <a href="/static/images/portfolio/full-project-3.jpg" class="lightbox-gallery-1 mfp-image">
+                        <div class="work-img">
+                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">Young Man</h3>
+                            <div class="work-descr">
+                                Lightbox
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+
+            </ul>
+            <!-- End Works Grid -->
+
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    {% addtoblock 'js' %}
+
+    {% endaddtoblock %}
+
+{% endblock %}

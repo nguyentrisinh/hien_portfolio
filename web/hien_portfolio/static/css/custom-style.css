@@ -1,0 +1,29 @@
+.work-grid-1 .work-item {
+    width: 100%;
+}
+
+.text-normal {
+    text-transform: none;
+}
+
+.ul-list-media-asset li {
+    display: inline!important;
+    list-style-type: none!important;
+}
+
+.portfolio-icon {
+    margin-right: 10px;
+}
+
+.portfolio-icon-item {
+    color: black;
+    font-size: 1.3em;
+}
+
+.portfolio-icon-item:hover {
+    opacity: 0.8!important;
+}
+
+.ul-list-media-asset li a {
+    text-decoration: none!important;
+}

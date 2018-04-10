@@ -1,0 +1,68 @@
+<!-- About Section -->
+{% if about_me is not None %}
+<section class="page-section" id="about">
+    <div class="container relative">
+
+        <div class="section-text mb-60 mb-sm-40">
+            <div class="row">
+
+                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+
+                    <h4 class="mt-0 font-alt">{{ about_me.title }}</h4>
+                    {{ about_me.description }}
+                </div>
+
+
+                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                    {% for skill in about_me.skill_set.all %}
+                        <!-- Bar Item -->
+                        <div class="progress tpl-progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0"
+                                 aria-valuemax="100">
+                                {{ skill.name }}<span>{{ skill.percentage }}%</span>
+                            </div>
+                        </div>
+                        <!-- End Bar Item -->
+                    {% endfor %}
+
+{#                    <!-- Bar Item -->#}
+{#                    <div class="progress tpl-progress">#}
+{#                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"#}
+{#                             aria-valuemax="100">#}
+{#                            Branding, % <span>90</span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <!-- End Bar Item -->#}
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Counters -->
+        <div class="count-wrapper mb-80 mb-sm-60">
+            <div class="row">
+                {% for statistic in about_me.statistic_set.all %}
+                    <!-- Counter Item -->
+                    <div class="col-xs-6 col-sm-3">
+                        <div class="count-number">
+                            {{ statistic.statistic }}
+                        </div>
+                        <div class="count-descr font-alt">
+                            {% if statistic.fa_icon != '' %}
+                                <i class="{{ statistic.fa_icon }}"></i>
+                            {% endif %}
+
+                            <span class="count-title">{{ statistic.title }}</span>
+                        </div>
+                    </div>
+                    <!-- End Counter Item -->
+                {% endfor %}
+            </div>
+        </div>
+        <!-- End Counters -->
+
+    </div>
+</section>
+
+{% endif %}
+<!-- End About Section -->

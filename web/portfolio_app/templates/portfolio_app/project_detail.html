@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load cms_tags sekizai_tags %}
+
+{% block content %}
+    {% addtoblock 'css' %}
+
+    {% endaddtoblock %}
+
+    <!-- Home Section -->
+    <section class="home-section bg-dark-alfa-30 parallax-2"
+             data-background="{{ object.top_image.url }}" id="home">
+{#             data-background="/static/images/resources/device-bg-1.jpg" id="home">#}
+        <div class="js-height-full container">
+
+            <!-- Hero Content -->
+            <div class="home-content">
+                <div class="home-text">
+
+                    <h1 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                        {{ object.title }}
+                    </h1>
+
+                </div>
+            </div>
+            <!-- End Hero Content -->
+
+            <!-- Scroll Down -->
+            <div class="local-scroll">
+                <a href="#portfolioList" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+            </div>
+            <!-- End Scroll Down -->
+
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+    <!-- Project Detail Section -->
+    <!-- Section -->
+    <section class="page-section">
+        <div class="container relative">
+            <!-- Work Gallery -->
+            <div class="work-full-media mb-80 mb-xs-40">
+                <ul class="clearlist work-full-slider owl-carousel">
+                    <li>
+                        <img src="/static/images/portfolio/full-project-1.jpg" alt=""/>
+                    </li>
+
+                    {% for media in object.mediaasset_set.all %}
+                        <li>
+                            <img src="{{ media.media_asset.url }}" alt=""/>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+            <!-- End Work Gallery -->
+
+
+            <div class="section-text">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="font-alt mt-0 mb-20">{{ object.title }}
+                            <ul class="pull-right ul-list-media-asset">
+                                {% if object.demo_url != '' and object.demo_url is not None %}
+                                    <li>
+                                        <a href="{{ object.demo_url }}" target="_blank">
+                                            <i class="portfolio-icon fa fa-globe portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                {% if object.youtube_embed_url != '' and object.youtube_embed_url is not None %}
+                                    <li>
+                                        <a href="{{ object.youtube_embed_url }}"
+                                           class="lightbox mfp-iframe">
+                                            <i class="portfolio-icon fa fa-youtube-play portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </h3>
+                    </div>
+                    <div class="col-md-4 mb-sm-50 mb-xs-30">
+                        <!-- Project Detail -->
+                        <div class="work-detail">
+                            <div class="work-full-detail">
+                                <p>
+                                    <strong>Client:</strong>
+                                    {{ object.client }}
+                                </p>
+                                <p>
+                                    <strong>Length:</strong>
+                                    {{ object.length }}
+                                </p>
+                                <p>
+                                    <strong>Roles:</strong>
+                                    {{ object.roles }}
+                                </p>
+                                <p>
+                                    <strong>Skills:</strong>
+                                    {{ object.skills }}
+                                </p>
+                                {% if object.demo_url != '' and object.demo_url is not None %}
+                                    <p>
+                                        <strong>Demo:</strong>
+                                        <a href="{{ object.demo_url }}" target="_blank">link</a>
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- End Project Detail -->
+                    </div>
+                    <div class="col-md-8 mb-sm-50 mb-xs-30 text-normal">
+                        <p>{{ object.short_description }}</p>
+                    </div>
+
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <h4 class="font-alt mt-0 mb-20 text-center" style="font-weight: bold;">Use Case</h4>
+                        <div>{{ object.description }}</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- End Section -->
+    <!-- End Project Detail Section -->
+
+    <!-- Divider -->
+    <hr class="mt-0 mb-0 "/>
+    <!-- End Divider -->
+
+    <!-- Work Navigation -->
+    <div class="work-navigation clearfix">
+        {% if previous_project is not None %}
+            <a href="/portfolio/{{ previous_project.slug }}" class="work-prev"><span><i
+                    class="fa fa-chevron-left"></i>&nbsp;Previous</span></a>
+        {% else %}
+            <a href="/portfolio/{{ previous_project.slug }}" class="work-prev invisible"><span><i
+                class="fa fa-chevron-left"></i>&nbsp;Previous</span></a>
+        {% endif %}
+
+        <a href="/portfolio" class="work-all"><span><i class="fa fa-align-justify"></i>&nbsp;All works</span></a>
+
+        {% if next_project is not None %}
+        <a href="/portfolio/{{ next_project.slug }}" class="work-next"><span>Next&nbsp;<i
+                class="fa fa-chevron-right"></i></span></a>
+        {% else %}
+            <a href="/portfolio/{{ next_project.slug }}" class="work-next invisible"><span>Next&nbsp;<i
+                    class="fa fa-chevron-right"></i></span></a>
+        {% endif %}
+    </div>
+    <!-- End Work Navigation -->
+
+    {% addtoblock 'js' %}
+
+    {% endaddtoblock %}
+
+{% endblock %}

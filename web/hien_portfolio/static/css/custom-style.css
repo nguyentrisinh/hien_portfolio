@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.display_none {
+    display: none!important;
+}
+
 .text-normal {
     text-transform: none;
 }
@@ -26,4 +30,16 @@
 
 .ul-list-media-asset li a {
     text-decoration: none!important;
+}
+
+.portfolio-item {
+    margin-top: 20px;
+}
+
+.hire_me_btn_style {
+    color: #37a200 !important;
+}
+
+.hire_me_btn_style:hover {
+    color: #48e300 !important;
 }

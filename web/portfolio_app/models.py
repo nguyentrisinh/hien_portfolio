@@ -35,11 +35,11 @@ class Project(CMSPlugin):
     sub_title = models.CharField(max_length=250, null=True, blank=True)
     short_description = models.TextField(default='')
     description = HTMLField(_('description'), blank=True, default='')
-    skills = models.CharField(max_length=255, null=True, blank=True)
-    roles = models.CharField(max_length=255, null=True, blank=True)
-    client = models.CharField(max_length=255, null=True, blank=True)
-    length = models.CharField(max_length=50, null=True, blank=True)
-    demo_url = models.URLField(max_length=255, null=True, blank=True)
+    skills = models.CharField(max_length=255, null=True, blank=True, default='' )
+    roles = models.CharField(max_length=255, null=True, blank=True, default='')
+    client = models.CharField(max_length=255, null=True, blank=True, default='')
+    length = models.CharField(max_length=50, null=True, blank=True, default='')
+    demo_url = models.URLField(max_length=255, null=True, blank=True, default='')
     youtube_embed_url = models.CharField(max_length=255, null=True, blank=True, default='')
     top_image = models.ImageField(upload_to='portfolio/img/top_image/', max_length=500, null=False, blank=False,
                                   default='')
@@ -72,7 +72,7 @@ class MediaAsset(models.Model):
 
     name = models.CharField(max_length=100, null=False, blank=False)
     type = models.PositiveSmallIntegerField(choices=MEDIA_TYPE, default=1)
-    media_asset = models.ImageField(upload_to='portfolio/img/', default='', null=True, blank=True)
+    media_asset = models.ImageField(upload_to='portfolio/img/', default='', null=False, blank=False)
     youtube_url = models.CharField(max_length=255, null=True, blank=True)
 
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)

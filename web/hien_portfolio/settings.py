@@ -139,6 +139,7 @@ INSTALLED_APPS = (
 
     'hero_area_plugin',
     'about_me_plugin',
+    'contact_me_plugin',
 
     'portfolio_app',
 
@@ -172,6 +173,7 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('homepage.html', 'Homepage'),
+    ('contact_me.html', 'Contact Me'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
 )

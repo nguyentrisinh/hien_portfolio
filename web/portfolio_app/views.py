@@ -23,8 +23,61 @@ class ProjectIndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProjectIndexView, self).get_context_data(**kwargs)
+        object_list = context['object_list']
 
+        # get list of project slug for init popup image
+        slug_list = []
+        for project in object_list.all():
+            slug_list.append(project.slug)
+
+        context['slug_list'] = slug_list
+        # end of getting list project slug for init popup image
+
+        # get all Tags
         tags = Tag.objects.all()
         context['tags'] = tags
 
         return context
+
+
+class ProjectDetailView(generic.DetailView):
+    model = Project
+    template_name = 'portfolio_app/project_detail.html'
+    slug_field = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectDetailView, self).get_context_data(**kwargs)
+        object = context['object']
+
+        # Begin get next and previous project
+        # list project id to not make previous and next same project
+        project_exclude_id = [object.id]
+        # Get the next project
+        next_project = Project.objects.filter(updated_at__gte=object.updated_at) \
+            .order_by('updated_at').exclude(id__in=project_exclude_id)
+
+        if next_project.exists():
+            next_project = next_project.first()
+            project_exclude_id.append(next_project.id)
+        else:
+            next_project = None
+
+        context['next_project'] = next_project
+        # end get next project
+
+        # Get previous project
+        previous_project = Project.objects.filter(updated_at__lte=object.updated_at) \
+            .order_by('-updated_at').exclude(id__in=project_exclude_id)
+
+        if previous_project.exists():
+            previous_project = previous_project.first()
+        else:
+            previous_project = None
+
+        # add to context
+        context['previous_project'] = previous_project
+        context['next_project'] = next_project
+
+        # End get next and previous project
+        return context
+

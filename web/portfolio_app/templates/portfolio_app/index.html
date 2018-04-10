@@ -6,45 +6,105 @@
 
     {% endaddtoblock %}
 
+    <!-- Home Section -->
+    <section class="home-section bg-dark-alfa-30 parallax-2"
+             data-background="/static/images/resources/device-bg-1.jpg" id="home">
+        <div class="js-height-full container">
+
+            <!-- Hero Content -->
+            <div class="home-content">
+                <div class="home-text">
+
+                    <h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                        {% for tag in tags %}
+                            {% if forloop.last %}
+                                {{ tag.name }}
+                            {% else %}
+                                {{ tag.name }} /
+                            {% endif %}
+
+                        {% endfor %}
+                    </h1>
+
+                    <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                        My Portfolio
+                    </h2>
+
+                </div>
+            </div>
+            <!-- End Hero Content -->
+
+            <!-- Scroll Down -->
+            <div class="local-scroll">
+                <a href="#portfolioList" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+            </div>
+            <!-- End Scroll Down -->
+
+        </div>
+    </section>
+    <!-- End Home Section -->
+
     <!-- Portfolio Section -->
-    <section class="page-section">
+    <section class="page-section" id="portfolioList">
         <div class="container relative">
 
             <!-- Works Filter -->
             <div class="works-filter font-alt align-center">
                 <a href="#" class="filter active" data-filter="*">All works</a>
-                <a href="#branding" class="filter" data-filter=".branding">Branding</a>
-                <a href="#design" class="filter" data-filter=".design">Design</a>
-                <a href="#photography" class="filter" data-filter=".photography">Photography</a>
+                {% for tag in tags.all %}
+                    <a href="#{{ tag.filter_tag }}" class="filter" data-filter=".{{ tag.filter_tag }}">{{ tag.name }}</a>
+                {% endfor %}
             </div>
             <!-- End Works Filter -->
 
             <!-- Works Grid -->
             <ul class="works-grid work-grid-1 clearfix font-alt hover-white hide-titles" id="work-grid">
+                {% for project in object_list %}
                 <!-- Work Item (Lightbox) -->
-                <li class="work-item mix photography">
+                <li class="work-item portfolio-item mix {% for tag in project.tags.all %} {{ tag.filter_tag }} {% endfor %}">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="font-alt mt-0 mb-20">Project Details
+                            <h4 class="font-alt mt-0 mb-20"><a href="/portfolio/{{ project.slug }}">{{ project.title }}</a>
                                 <ul class="pull-right ul-list-media-asset">
 
+                                    {% if project.demo_url != '' and project.demo_url is not None %}
                                     <li>
-                                        <a href="/" target="_blank">
+                                        <a href="{{ project.demo_url }}" target="_blank">
                                             <i class="portfolio-icon fa fa-globe portfolio-icon-item"></i>
                                         </a>
                                     </li>
+                                    {% endif %}
+{##}
+{#                                    <li>#}
+{#                                        <a href="/" target="_blank">#}
+{#                                            <i class="portfolio-icon fa fa-phone portfolio-icon-item"></i>#}
+{#                                        </a>#}
+{#                                    </li>#}
+                                    {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
+                                        <li>
+                                            <a href="{{ project.youtube_embed_url }}"
+                                               class="lightbox mfp-iframe">
+                                                <i class="portfolio-icon fa fa-youtube-play portfolio-icon-item"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
 
-                                    <li>
-                                        <a href="/" target="_blank">
-                                            <i class="portfolio-icon fa fa-phone portfolio-icon-item"></i>
-                                        </a>
-                                    </li>
+                                    {% if project.mediaasset_set.all|length != 0 %}
+                                        <li>
+                                        {% for media in project.mediaasset_set.all %}
 
-                                    <li>
-                                        <a href="/" target="_blank">
-                                            <i class="portfolio-icon fa fa-image portfolio-icon-item"></i>
-                                        </a>
-                                    </li>
+                                            {% if forloop.first %}
+                                            <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
+                                                <i class="portfolio-icon fa fa-image portfolio-icon-item"></i>
+                                            </a>
+                                            {% else %}
+                                            <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image display_none">
+                                            </a>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                        </li>
+                                    {% endif %}
 
                                 </ul>
                             </h4>
@@ -55,146 +115,38 @@
                                     <div class="work-full-detail">
                                         <p>
                                             <strong>Client:</strong>
-                                            Envato Users
+                                            {{ project.client }}
                                         </p>
                                         <p>
                                             <strong>Length:</strong>
-                                            6 Months
+                                            {{ project.length }}
                                         </p>
                                         <p>
                                             <strong>Roles:</strong>
-                                            Developer, Technical Lead
+                                            {{ project.roles }}
                                         </p>
                                         <p>
                                             <strong>Skills:</strong>
-                                            1th Februery, 2014
+                                            {{ project.skills }}
                                         </p>
+                                        {% if project.demo_url != '' and project.demo_url is not None %}
                                         <p>
                                             <strong>Demo:</strong>
-                                            <a href="#" target="_blank">www.rhythm.bestlooker.pro</a>
+                                            <a href="{{ project.demo_url }}" target="_blank">link</a>
                                         </p>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <!-- End Project Detail -->
                         </div>
                         <div class="col-md-8 mb-sm-50 mb-xs-30 text-normal">
-                            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros ipsum, aliquam quis consequat et, ultricies eget ex. Maecenas in dapibus quam, id vulputate ex. Curabitur commodo justo a tincidunt dignissim. Maecenas pellentesque enim odio, nec dapibus eros pulvinar non. Donec congue nulla nec diam tristique, in rhoncus lectus aliquet. Phasellus dui eros, pretium quis quam ut, sodales ultricies quam. Cras tempor eros non auctor placerat. Sed eu orci turpis.</p>
+                            <p>{{ project.short_description  }}</p>
                         </div>
                     </div>
                 </li>
                 <!-- End Work Item -->
 
-                <!-- Work Item (External Page) -->
-                <li class="work-item mix branding design">
-                    <a href="portfolio-single-1.html" class="work-ext-link">
-                        <div class="work-img">
-                            <img class="work-img" src="/static/images/portfolio/projects-2.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Vase 3D</h3>
-                            <div class="work-descr">
-                                External Page
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                <!-- Work Item (External Page) -->
-                <li class="work-item mix branding">
-                    <a href="portfolio-single-1.html" class="work-ext-link">
-                        <div class="work-img">
-                            <img class="work-img" src="/static/images/portfolio/projects-3.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Boy in T-shirt</h3>
-                            <div class="work-descr">
-                                External Page
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                <!-- Work Item (External Page) -->
-                <li class="work-item mix design photography">
-                    <a href="portfolio-single-1.html" class="work-ext-link">
-                        <div class="work-img">
-                            <img class="work-img" src="/static/images/portfolio/projects-4.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Space</h3>
-                            <div class="work-descr">
-                                External Page
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                <!-- Work Item (External Page) -->
-                <li class="work-item mix design">
-                    <a href="portfolio-single-1.html" class="work-ext-link">
-                        <div class="work-img">
-                            <img class="work-img" src="/static/images/portfolio/projects-5.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Model</h3>
-                            <div class="work-descr">
-                                External Page
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                <!-- Work Item (Lightbox) -->
-                <li class="work-item mix design branding">
-                    <a href="/static/images/portfolio/full-project-3.jpg" class="work-lightbox-link mfp-image">
-                        <div class="work-img">
-                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Young Man</h3>
-                            <div class="work-descr">
-                                Lightbox
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                <!-- Work Item (Lightbox) -->
-                <li class="work-item mix design branding">
-                    <a href="/static/images/portfolio/full-project-3.jpg" class="lightbox-gallery-1 mfp-image">
-                        <div class="work-img">
-                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Young Man</h3>
-                            <div class="work-descr">
-                                Lightbox
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
-
-                                <!-- Work Item (Lightbox) -->
-                <li class="work-item mix design branding">
-                    <a href="/static/images/portfolio/full-project-3.jpg" class="lightbox-gallery-1 mfp-image">
-                        <div class="work-img">
-                            <img src="/static/images/portfolio/projects-6.jpg" alt="Work"/>
-                        </div>
-                        <div class="work-intro">
-                            <h3 class="work-title">Young Man</h3>
-                            <div class="work-descr">
-                                Lightbox
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- End Work Item -->
+                {% endfor %}
 
             </ul>
             <!-- End Works Grid -->
@@ -204,6 +156,16 @@
     <!-- End Portfolio Section -->
 
     {% addtoblock 'js' %}
+        <script>
+        slugList = {{ slug_list|safe }}
+            for (i = 0; i < {{ slug_list|length }}; i++) {
+                $(".lightbox-gallery-" + slugList[i]).magnificPopup({
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            }
+        </script>
 
     {% endaddtoblock %}
 

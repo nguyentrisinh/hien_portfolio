@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e71cf0e-64f9-47c8-bec4-fddd6f5de576" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/call_action_component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/css/custom_flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/css/flaticon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/Flaticon1.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/Flaticon1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/Flaticon1.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/Flaticon1.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/flaticon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/flaticon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/static/fonts/custom/flaticon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/portfolio_app/cms_plugins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/plugin/call_action_portfolio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/plugin/latest_work.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/services_plugin/cms_plugins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/services_plugin/templates/services_plugin/plugin/services_component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/testimonial_plugin/cms_plugins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/testimonial_plugin/templates/testimonial_plugin/plugin/testimonial_component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/contact_me_plugin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/contact_me_plugin/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/contact_me_plugin/cms_plugins.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/contact_me_plugin/cms_plugins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/contact_me_plugin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/contact_me_plugin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hero_area_plugin/templates/hero_area_plugin/plugin/short_hero_area_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/hero_area_plugin/templates/hero_area_plugin/plugin/short_hero_area_component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/hien_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,8 +41,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="190" column="59" selection-start-line="190" selection-start-column="59" selection-end-line="190" selection-end-column="59" />
+            <state relative-caret-position="481">
+              <caret line="210" selection-start-line="210" selection-end-line="210" />
             </state>
           </provider>
         </entry>
@@ -417,7 +391,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -425,8 +398,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -847,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/hien_portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="190" column="59" selection-start-line="190" selection-start-column="59" selection-end-line="190" selection-end-column="59" />
+        <state relative-caret-position="481">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
         </state>
       </provider>
     </entry>

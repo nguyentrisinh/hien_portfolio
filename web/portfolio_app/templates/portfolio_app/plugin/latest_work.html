@@ -1,0 +1,44 @@
+<!-- Portfolio Section -->
+<section class="page-section pb-0" id="portfolio">
+    <div class="relative">
+
+        <h2 class="section-title font-alt mb-70 mb-sm-40">
+            Latest Works
+        </h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="section-text align-center mb-70 mb-xs-40">
+                        {{ instance.message }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Works Grid -->
+        <ul class="works-grid work-grid-3 work-grid-gut clearfix font-alt hover-white hide-titles" id="work-grid">
+
+            {% for project in project_list %}
+                <!-- Work Item (External Page) -->
+                <li class="work-item">
+                    <a href="/portfolio/{{ project.slug }}" class="work-ext-link">
+                        <div class="work-img">
+                            <img class="work-img" src="{{ project.top_image.url }}" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">{{ project.title }}</h3>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+            {% endfor %}
+
+        </ul>
+        <!-- End Works Grid -->
+
+    </div>
+</section>
+<!-- End Portfolio Section -->

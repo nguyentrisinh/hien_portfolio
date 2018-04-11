@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+    {% addtoblock "css" %}
+        <link rel="stylesheet" href="/static/css/flaticon.css">
+        <link rel="stylesheet" href="/static/css/custom_flaticon.css">
+    {% endaddtoblock %}
+
+    {% placeholder hero_area %}
+
+    {% placeholder services_list %}
+
+    {% addtoblock "js" %}
+
+    {% endaddtoblock %}
+{% endblock content %}

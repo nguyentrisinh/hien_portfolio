@@ -19,8 +19,6 @@ class Message(models.Model):
 
     name = models.CharField(max_length=150, null=False, blank=False)
     email = models.CharField(max_length=250, null=False, blank=False)
-    phone = models.CharField(max_length=150, null=False, blank=False)
-    subject = models.CharField(max_length=250, null=False, blank=False)
     message = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False, editable=False)
@@ -39,3 +37,13 @@ class GoogleMap(CMSPlugin):
         return self.address
 
 
+class CallActionSection(CMSPlugin):
+    objects = models.Manager()
+
+    title = models.CharField(max_length=150, null=False, blank=False)
+    message = models.CharField(max_length=500, null=False, blank=False)
+    image = models.ImageField(upload_to='contact_me/img/', null=False, blank=False)
+    background_image = models.ImageField(upload_to='contact_me/img/', null=True, blank=True, default='')
+
+    def __str__(self):
+        return self.title

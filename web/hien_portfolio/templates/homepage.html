@@ -5,7 +5,8 @@
 
 {% block content %}
     {% addtoblock "css" %}
-
+        <link rel="stylesheet" href="/static/css/flaticon.css">
+        <link rel="stylesheet" href="/static/css/custom_flaticon.css">
     {% endaddtoblock %}
 
     <!-- Introduction -->
@@ -15,6 +16,22 @@
     <!-- About Me -->
     {% placeholder about_me %}
     <!-- End About Me -->
+
+    <!-- Call action Contact Me -->
+    {% placeholder call_action %}
+    <!-- End Call action Contact Me -->
+
+    <!-- latest Work List -->
+    {% placeholder latest_work %}
+    <!-- End Latest Work -->
+
+    <!-- Testimonial -->
+    {% placeholder services %}
+    <!-- End Testimonial -->
+
+    <!-- Testimonial -->
+    {% placeholder testimonial %}
+    <!-- End Testimonial -->
 
     {% addtoblock "js" %}
 

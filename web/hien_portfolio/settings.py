@@ -140,6 +140,8 @@ INSTALLED_APPS = (
     'hero_area_plugin',
     'about_me_plugin',
     'contact_me_plugin',
+    'testimonial_plugin',
+    'services_plugin',
 
     'portfolio_app',
 
@@ -173,6 +175,7 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('homepage.html', 'Homepage'),
+    ('service.html', 'Service Page'),
     ('contact_me.html', 'Contact Me'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
@@ -186,8 +189,6 @@ DATABASES = {
     'default': {
         # Local Database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'tam_portfolio_db',
-        # 'NAME': 'tam_portfolio_test_db',
         'NAME': 'hien_portfolio_db',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',

@@ -1,7 +1,7 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
-from .models import ContactMe, GoogleMap, Message
+from .models import ContactMe, GoogleMap, Message, CallActionSection
 
 
 @plugin_pool.register_plugin
@@ -12,12 +12,13 @@ class ContactMeComponentPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(ContactMeComponentPlugin, self).render(context, instance, placeholder)
-        instance = context['instance']
 
         request = context['request']
 
         if request.GET.get('name') is not None:
-            print(request.GET.get('name'))
+            message = Message(name=request.GET.get('name'), email=request.GET.get('email'),
+                              message=request.GET.get('message'))
+            message.save()
 
         return context
 
@@ -30,6 +31,17 @@ class GoogleMapComponentPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super(GoogleMapComponentPlugin, self).render(context, instance, placeholder)
-        instance = context['instance']
+
+        return context
+
+
+@plugin_pool.register_plugin
+class CallActionComponentPlugin(CMSPluginBase):
+    model = CallActionSection
+    render_template = 'contact_me_plugin/plugin/call_action_component.html'
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        context = super(CallActionComponentPlugin, self).render(context, instance, placeholder)
 
         return context

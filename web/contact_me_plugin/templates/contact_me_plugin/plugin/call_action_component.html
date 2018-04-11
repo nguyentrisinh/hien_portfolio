@@ -1,0 +1,32 @@
+<!-- Call Action Section -->
+<section class="page-section pt-0 pb-0 banner-section bg-dark"
+         data-background="{{ instance.background_image.url }}">
+    <div class="container relative">
+
+        <div class="row">
+
+            <div class="col-sm-6">
+
+                <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
+                    <div class="banner-content">
+                        <h3 class="banner-heading font-alt">{{ instance.title }}</h3>
+                        <div class="banner-decription">
+                            {{ instance.message }}
+                        </div>
+                        <div class="local-scroll">
+                            <a href="/contact" class="btn btn-mod btn-w btn-medium btn-round">Lets contact me</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 banner-image wow fadeInUp">
+                <img src="{{ instance.image.url }}" alt=""/>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End Call Action Section -->

@@ -1,0 +1,34 @@
+<!-- Features Section -->
+<section class="page-section">
+    <div class="container relative">
+
+        <h2 class="section-title font-alt mb-70 mb-sm-40">
+            Why Choose Me?
+        </h2>
+
+        <!-- Features Grid -->
+        <div class="row multi-columns-row alt-features-grid">
+
+            {% for service in instance.serviceitem_set.all %}
+            <!-- Features Item -->
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="alt-features-item align-center">
+                    <div class="alt-features-icon">
+                        <span class="{{ service.icon_class_name }}"></span>
+                    </div>
+                    <h3 class="alt-features-title font-alt">{{ service.title }}</h3>
+                    <div class="alt-features-descr align-center">
+                        {{ service.content }}
+                    </div>
+                </div>
+            </div>
+            <!-- End Features Item -->
+
+            {% endfor %}
+
+        </div>
+        <!-- End Features Grid -->
+
+    </div>
+</section>
+<!-- End Features Section -->

@@ -5,7 +5,7 @@ services:
     image: postgres:9.6
     container_name: hien_portfolio_db
     restart: always
-    # command: bash -c "sudo pg_restore --username=postgres -d hien_portfolio_db ./backupdb/hien_portfolio_db_04-11-2018_14-39.sql "
+    # command: bash -c "pg_restore --username=postgres -d hien_portfolio_db ./backupdb/hien_portfolio_db_04-11-2018_14-39.sql"
     volumes: 
     #   - psql:/var/lib/postgres/data
       - ./backupdb:/backupdb
@@ -28,7 +28,8 @@ services:
   web:
     build: ./web
     container_name: hien_portfolio_web
-    command: bash -c "python manage.py migrate && gunicorn hien_portfolio.wsgi -b 0.0.0.0:8012"
+    # command: bash -c "python manage.py migrate && gunicorn hien_portfolio.wsgi -b 0.0.0.0:8012"
+    command: bash -c "gunicorn hien_portfolio.wsgi -b 0.0.0.0:8012"
     depends_on:
       - db
     expose:

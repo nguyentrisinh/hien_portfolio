@@ -27,7 +27,7 @@ SECRET_KEY = '&x6crfu@akq3rge7uu_sfzdo)7$)rk%%fo0f#$u*4sg2qnr+8y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['web']
 
 
 # Application definition
@@ -189,11 +189,12 @@ DATABASES = {
     'default': {
         # Local Database
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'hien_portfolio_db',
-        'NAME': 'hien_portfolio_test_db',
+        'NAME': 'hien_portfolio_db',
+        # 'NAME': 'hien_portfolio_test_db',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
-        'HOST': 'localhost',
+        # 'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '',
     }
 }

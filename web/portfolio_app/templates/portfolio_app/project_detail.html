@@ -41,10 +41,6 @@
             <!-- Work Gallery -->
             <div class="work-full-media mb-80 mb-xs-40">
                 <ul class="clearlist work-full-slider owl-carousel">
-                    <li>
-                        <img src="/static/images/portfolio/full-project-1.jpg" alt=""/>
-                    </li>
-
                     {% for media in object.mediaasset_set.all %}
                         <li>
                             <img src="{{ media.media_asset.url }}" alt=""/>

@@ -191,6 +191,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'hien_portfolio_db',
         # 'NAME': 'hien_portfolio_test_db',
+        # 'NAME': 'hien_portfolio_test_db_2',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
         # 'HOST': 'localhost',

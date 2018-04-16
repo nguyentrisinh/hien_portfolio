@@ -7,7 +7,7 @@ services:
     restart: always
     # command: bash -c "pg_restore --username=postgres -d hien_portfolio_db ./backupdb/hien_portfolio_db_04-11-2018_14-39.sql"
     volumes: 
-    #   - psql:/var/lib/postgres/data
+      - psql:/var/lib/postgresql/data
       - ./backupdb:/backupdb
     environment:
       - POSTGRES_USER=postgres
@@ -34,3 +34,9 @@ services:
       - db
     expose:
       - "8012"
+
+
+volumes:
+
+  psql:
+    driver: local

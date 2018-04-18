@@ -17,7 +17,7 @@ services:
     image: nginx:latest
     container_name: hien_portfolio_nginx
     ports:
-      - '8014:8012'
+      - '5001:8012'
     volumes:
       - ./web:/hien_portfolio
       - ./nginx/:/etc/nginx/conf.d

@@ -34,6 +34,5 @@ services:
     expose:
       - "8012"
 volumes:
-
   psql:
     driver: local

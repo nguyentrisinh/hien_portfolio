@@ -1097,7 +1097,8 @@ function init_map(){
                     address: gmMarkerAddress,
                     options: {
                         // icon: "images/map-marker.png"
-                        icon: "/static/images/map-marker.png"
+                        icon: "/hiennv/static/images/map-marker.png"
+                        // icon: "/static/images/map-marker.png"
                     }
                 },
                 map: {

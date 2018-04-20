@@ -26,7 +26,7 @@
 
             <!-- Scroll Down -->
             <div class="local-scroll">
-                <a href="#portfolioList" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+                <a href="#portfolioDetail" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
             </div>
             <!-- End Scroll Down -->
 
@@ -36,7 +36,7 @@
 
     <!-- Project Detail Section -->
     <!-- Section -->
-    <section class="page-section">
+    <section class="page-section" id="portfolioDetail">
         <div class="container relative">
             <!-- Work Gallery -->
             <div class="work-full-media mb-80 mb-xs-40">
@@ -131,20 +131,20 @@
     <!-- Work Navigation -->
     <div class="work-navigation clearfix">
         {% if previous_project is not None %}
-            <a href="/portfolio/{{ previous_project.slug }}" class="work-prev"><span><i
+            <a href="/hiennv/portfolio/{{ previous_project.slug }}" class="work-prev"><span><i
                     class="fa fa-chevron-left"></i>&nbsp;Previous</span></a>
         {% else %}
-            <a href="/portfolio/{{ previous_project.slug }}" class="work-prev invisible"><span><i
+            <a href="/hiennv/portfolio/{{ previous_project.slug }}" class="work-prev invisible"><span><i
                 class="fa fa-chevron-left"></i>&nbsp;Previous</span></a>
         {% endif %}
 
-        <a href="/portfolio" class="work-all"><span><i class="fa fa-align-justify"></i>&nbsp;All works</span></a>
+        <a href="/hiennv/portfolio" class="work-all"><span><i class="fa fa-align-justify"></i>&nbsp;All works</span></a>
 
         {% if next_project is not None %}
-        <a href="/portfolio/{{ next_project.slug }}" class="work-next"><span>Next&nbsp;<i
+        <a href="/hiennv/portfolio/{{ next_project.slug }}" class="work-next"><span>Next&nbsp;<i
                 class="fa fa-chevron-right"></i></span></a>
         {% else %}
-            <a href="/portfolio/{{ next_project.slug }}" class="work-next invisible"><span>Next&nbsp;<i
+            <a href="/hiennv/portfolio/{{ next_project.slug }}" class="work-next invisible"><span>Next&nbsp;<i
                     class="fa fa-chevron-right"></i></span></a>
         {% endif %}
     </div>

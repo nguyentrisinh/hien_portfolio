@@ -52,7 +52,12 @@ main_urlpatterns = [
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
 ] + staticfiles_urlpatterns() + main_urlpatterns
 
+# main_urlpatterns = [
+#     url(r'^media/(?P<path>.*)$', serve,
+#         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+# ] + main_urlpatterns
+
 
 urlpatterns = [
     url(r'^hiennv/', include(main_urlpatterns))
-]
+] + staticfiles_urlpatterns()

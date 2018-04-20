@@ -15,8 +15,9 @@ services:
   nginx:
     image: nginx:latest
     container_name: hien_portfolio_nginx
+    restart: always
     ports:
-      - '5001:8012'
+      - '5001:5001'
     volumes:
       - ./web:/hien_portfolio
       - ./nginx/:/etc/nginx/conf.d
@@ -27,6 +28,7 @@ services:
   web:
     build: ./web
     container_name: hien_portfolio_web
+    restart: always
     # command: bash -c "python manage.py migrate && gunicorn hien_portfolio.wsgi -b 0.0.0.0:8012"
     command: bash -c "gunicorn hien_portfolio.wsgi -b 0.0.0.0:8012"
     depends_on:

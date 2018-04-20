@@ -51,8 +51,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-# STATIC_URL = '/static/'
-STATIC_URL = '/hiennv/static/'
+STATIC_URL = '/static/'
+# STATIC_URL = '/hiennv/static/'
 # MEDIA_URL = '/media/'
 MEDIA_URL = '/hiennv/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
@@ -196,8 +196,8 @@ DATABASES = {
         # 'NAME': 'hien_portfolio_test_db_2',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
-        'HOST': 'localhost',
-        # 'HOST': 'db',
+        # 'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '',
     }
 }

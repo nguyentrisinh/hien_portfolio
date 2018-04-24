@@ -38,21 +38,6 @@
     <!-- Section -->
     <section class="page-section" id="portfolioDetail">
         <div class="container relative">
-            <!-- Work Gallery -->
-            <div class="work-full-media mb-80 mb-xs-40">
-                <ul class="clearlist work-full-slider owl-carousel">
-                    {% for media in object.mediaasset_set.all %}
-                        <li>
-                            <img src="{{ media.media_asset.url }}" alt=""/>
-                        </li>
-                    {% endfor %}
-
-                </ul>
-
-            </div>
-            <!-- End Work Gallery -->
-
-
             <div class="section-text">
                 <div class="row">
                     <div class="col-md-12">
@@ -74,6 +59,27 @@
                                         </a>
                                     </li>
                                 {% endif %}
+
+                                {% if object.mediaasset_set.all|length != 0 %}
+                                    <li>
+                                        {% for media in object.mediaasset_set.all %}
+
+                                            {% if forloop.first %}
+                                                <a href="{{ media.media_asset.url }}"
+                                                   class="lightbox-gallery-{{ object.slug }} mfp-image">
+                                                    <i class="portfolio-icon fa fa-image portfolio-icon-item"></i>
+                                                </a>
+                                            {% else %}
+                                                <a href="{{ media.media_asset.url }}"
+                                                   class="lightbox-gallery-{{ object.slug }} mfp-image display_none">
+                                                </a>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </li>
+                                {% endif %}
+
+
                             </ul>
                         </h3>
                     </div>
@@ -151,6 +157,13 @@
     <!-- End Work Navigation -->
 
     {% addtoblock 'js' %}
+        <script>
+            $(".lightbox-gallery-{{ object.slug }}").magnificPopup({
+                gallery: {
+                    enabled: true
+                }
+            });
+        </script>
 
     {% endaddtoblock %}
 

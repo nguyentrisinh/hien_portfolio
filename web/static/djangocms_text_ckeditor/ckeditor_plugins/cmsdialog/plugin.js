@@ -868,10 +868,8 @@ CKEDITOR.DIALOG_STATE_BUSY = 2;
             // Reset all inputs back to their default value.
             this.reset();
 
-            // Selects the first tab if no tab is already selected.
-            if ( this._.currentTabId === null ) {
-                this.selectPage( this.definition.contents[ 0 ].id );
-            }
+            // Select the first tab by default.
+            this.selectPage( this.definition.contents[ 0 ].id );
 
             // Set z-index.
             if ( CKEDITOR.dialog._.currentZIndex === null )
@@ -3004,10 +3002,6 @@ CKEDITOR.DIALOG_STATE_BUSY = 2;
      * @param {String} dialogName The name of the dialog to open when executing
      * this command.
      * @param {Object} [ext] Additional command definition's properties.
-     * @param {String} [ext.tabId] You can provide additional property (`tabId`) if you wish to open the dialog on a specific tabId.
-     *
-     *      // Open the dialog on the 'keystroke' tabId.
-     *      editor.addCommand( 'keystroke', new CKEDITOR.dialogCommand( 'a11yHelp', { tabId: 'keystroke' } ) );
      */
     CKEDITOR.dialogCommand = function( dialogName, ext ) {
         this.dialogName = dialogName;
@@ -3016,13 +3010,7 @@ CKEDITOR.DIALOG_STATE_BUSY = 2;
 
     CKEDITOR.dialogCommand.prototype = {
         exec: function( editor ) {
-            var tabId = this.tabId;
-            editor.openDialog( this.dialogName, function( dialog ) {
-                // Select different tab if it's provided (#830).
-                if ( tabId ) {
-                    dialog.selectPage( tabId );
-                }
-            } );
+            editor.openDialog( this.dialogName );
         },
 
         // Dialog commands just open a dialog ui, thus require no undo logic,
@@ -3210,19 +3198,13 @@ CKEDITOR.DIALOG_STATE_BUSY = 2;
     } );
 } )();
 
-CKEDITOR.plugins.registered['dialog'] = null;
-CKEDITOR.plugins.add( 'dialog', {
+CKEDITOR.plugins.add( 'cmsdialog', {
     requires: 'dialogui',
     init: function( editor ) {
         editor.on( 'doubleclick', function( evt ) {
             if ( evt.data.dialog )
                 editor.openDialog( evt.data.dialog );
         }, null, null, 999 );
-    }
-} );
-CKEDITOR.plugins.add( 'cmsdialog', {
-    requires: 'dialogui',
-    init: function( editor ) {
     }
 } );
 

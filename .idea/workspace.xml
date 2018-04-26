@@ -4,8 +4,6 @@
     <list default="true" id="7e71cf0e-64f9-47c8-bec4-fddd6f5de576" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/project_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/project_detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="199" column="21" lean-forward="true" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
+            <state relative-caret-position="243">
+              <caret line="200" column="19" lean-forward="true" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -47,7 +45,7 @@
       <file leaf-file-name="custom_flaticon.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom_flaticon.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="748">
               <caret line="44" column="35" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="35" />
             </state>
           </provider>
@@ -56,7 +54,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/portfolio_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
+            <state relative-caret-position="510">
               <caret line="34" column="71" selection-start-line="34" selection-start-column="71" selection-end-line="34" selection-end-column="71" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -107,11 +105,9 @@
             <state relative-caret-position="68">
               <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding>
-                <element signature="e#1514#1592#0#DjangoTemplate" />
-                <element signature="e#2004#2074#0#DjangoTemplate" />
-                <element signature="n#if#0;n#!!top" />
-                <element signature="n#if#1;n#!!top" />
-                <element signature="n#if#2;n#!!top" />
+                <element signature="e#1575#1653#0#DjangoTemplate" />
+                <element signature="e#2065#2135#0#DjangoTemplate" />
+                <element signature="e#2541#2603#0#DjangoTemplate" />
               </folding>
             </state>
           </provider>
@@ -120,7 +116,7 @@
       <file leaf-file-name="contact_me_component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="2023">
               <caret line="119" column="57" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="57" />
             </state>
           </provider>
@@ -129,8 +125,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+            <state relative-caret-position="175">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
             </state>
           </provider>
         </entry>
@@ -212,9 +208,9 @@
         <option value="$PROJECT_DIR$/web/about_me_plugin/models.py" />
         <option value="$PROJECT_DIR$/web/contact_me_plugin/cms_plugins.py" />
         <option value="$PROJECT_DIR$/web/portfolio_app/models.py" />
-        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/project_detail.html" />
+        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/hien_portfolio/settings.py" />
       </list>
     </option>
@@ -236,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,6 +362,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,8 +446,8 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32943678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -777,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/portfolio_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="510">
           <caret line="34" column="71" selection-start-line="34" selection-start-column="71" selection-end-line="34" selection-end-column="71" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -787,21 +783,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom_flaticon.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="748">
           <caret line="44" column="35" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="2023">
           <caret line="119" column="57" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="57" />
         </state>
       </provider>
@@ -825,19 +814,24 @@
         <state relative-caret-position="68">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
-            <element signature="e#1514#1592#0#DjangoTemplate" />
-            <element signature="e#2004#2074#0#DjangoTemplate" />
-            <element signature="n#if#0;n#!!top" />
-            <element signature="n#if#1;n#!!top" />
-            <element signature="n#if#2;n#!!top" />
+            <element signature="e#1575#1653#0#DjangoTemplate" />
+            <element signature="e#2065#2135#0#DjangoTemplate" />
+            <element signature="e#2541#2603#0#DjangoTemplate" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/hien_portfolio/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="199" column="21" lean-forward="true" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
+        <state relative-caret-position="243">
+          <caret line="200" column="19" lean-forward="true" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="19" />
         </state>
       </provider>
     </entry>

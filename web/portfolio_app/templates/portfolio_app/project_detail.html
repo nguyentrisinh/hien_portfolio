@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load cms_tags sekizai_tags %}
 
+{% block title %}
+Project {{ object.title }}
+{% endblock %}
+
 {% block content %}
     {% addtoblock 'css' %}
 

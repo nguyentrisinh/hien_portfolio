@@ -40,6 +40,8 @@ class Project(CMSPlugin):
     client = models.CharField(max_length=255, null=True, blank=True, default='')
     length = models.CharField(max_length=50, null=True, blank=True, default='')
     demo_url = models.URLField(max_length=255, null=True, blank=True, default='')
+    android_demo_url = models.URLField(max_length=500, null=True, blank=True, default='')
+    ios_demo_url = models.URLField(max_length=500, null=True, blank=True, default='')
     youtube_embed_url = models.CharField(max_length=255, null=True, blank=True, default='')
     top_image = models.ImageField(upload_to='portfolio/img/top_image/', max_length=500, null=False, blank=False,
                                   default='')

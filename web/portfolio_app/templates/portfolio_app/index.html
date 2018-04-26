@@ -67,6 +67,22 @@
                             <h4 class="font-alt mt-0 mb-20"><a href="/hiennv/portfolio/{{ project.slug }}">{{ project.title }}</a>
                                 <ul class="pull-right ul-list-media-asset">
 
+                                    {% if project.android_demo_url != '' and project.android_demo_url is not None %}
+                                        <li>
+                                            <a href="{{ project.android_demo_url }}" target="_blank">
+                                                <i class="portfolio-icon fa fa-android portfolio-icon-item"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
+
+                                    {% if project.ios_demo_url != '' and project.ios_demo_url is not None %}
+                                        <li>
+                                            <a href="{{ project.ios_demo_url }}" target="_blank">
+                                                <i class="portfolio-icon fa fa-apple portfolio-icon-item"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
+
                                     {% if project.demo_url != '' and project.demo_url is not None %}
                                     <li>
                                         <a href="{{ project.demo_url }}" target="_blank">
@@ -74,12 +90,7 @@
                                         </a>
                                     </li>
                                     {% endif %}
-{##}
-{#                                    <li>#}
-{#                                        <a href="/" target="_blank">#}
-{#                                            <i class="portfolio-icon fa fa-phone portfolio-icon-item"></i>#}
-{#                                        </a>#}
-{#                                    </li>#}
+
                                     {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
                                         <li>
                                             <a href="{{ project.youtube_embed_url }}"

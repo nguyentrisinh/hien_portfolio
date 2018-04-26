@@ -43,6 +43,22 @@
                     <div class="col-md-12">
                         <h3 class="font-alt mt-0 mb-20">{{ object.title }}
                             <ul class="pull-right ul-list-media-asset">
+                                {% if object.android_demo_url != '' and object.android_demo_url is not None %}
+                                    <li>
+                                        <a href="{{ object.android_demo_url }}" target="_blank">
+                                            <i class="portfolio-icon fa fa-android portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                {% if object.ios_demo_url != '' and object.ios_demo_url is not None %}
+                                    <li>
+                                        <a href="{{ object.ios_demo_url }}" target="_blank">
+                                            <i class="portfolio-icon fa fa-apple portfolio-icon-item"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
                                 {% if object.demo_url != '' and object.demo_url is not None %}
                                     <li>
                                         <a href="{{ object.demo_url }}" target="_blank">
@@ -78,7 +94,6 @@
                                         {% endfor %}
                                     </li>
                                 {% endif %}
-
 
                             </ul>
                         </h3>

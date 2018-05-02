@@ -47,10 +47,11 @@ main_urlpatterns += [
 #             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
 #         ] + staticfiles_urlpatterns() + main_urlpatterns
 
-main_urlpatterns = [
-    url(r'^media/(?P<path>.*)$', serve,
+urlpatterns = [
+    url(r'^hiennv/media/(?P<path>.*)$', serve,
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-] + staticfiles_urlpatterns() + main_urlpatterns
+    url(r'^hiennv/', include(main_urlpatterns)),
+] + staticfiles_urlpatterns()
 
 # main_urlpatterns = [
 #     url(r'^media/(?P<path>.*)$', serve,
@@ -58,6 +59,6 @@ main_urlpatterns = [
 # ] + main_urlpatterns
 
 
-urlpatterns = [
-    url(r'^hiennv/', include(main_urlpatterns))
-] + staticfiles_urlpatterns()
+# urlpatterns = [
+#     url(r'^hiennv/', include(main_urlpatterns))
+# ] + staticfiles_urlpatterns()

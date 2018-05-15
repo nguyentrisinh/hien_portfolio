@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e71cf0e-64f9-47c8-bec4-fddd6f5de576" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html" afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html" />
+      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html" afterPath="$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,14 +30,34 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2312">
-              <caret line="142" column="83" lean-forward="true" selection-start-line="142" selection-start-column="83" selection-end-line="142" selection-end-column="83" />
+            <state relative-caret-position="155">
+              <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact_me.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact_me_component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="119" column="57" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -104,6 +125,7 @@
       <find>cms</find>
       <find>cms.page</find>
       <find>/static/</find>
+      <find>cdn-cgi/scripts/f2bf09f8/cloudflare-static/email-decode.min.js</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +146,6 @@
         <option value="$PROJECT_DIR$/web/hero_area_plugin/models.py" />
         <option value="$PROJECT_DIR$/web/hero_area_plugin/admin.py" />
         <option value="$PROJECT_DIR$/web/hero_area_plugin/cms_plugins.py" />
-        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html" />
         <option value="$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/google_map_component.html" />
         <option value="$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css" />
         <option value="$PROJECT_DIR$/web/contact_me_plugin/views.py" />
@@ -158,9 +179,10 @@
         <option value="$PROJECT_DIR$/web/hien_portfolio/urls.py" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/project_detail.html" />
-        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/hien_portfolio/settings.py" />
         <option value="$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
+        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html" />
       </list>
     </option>
   </component>
@@ -208,6 +230,36 @@
               <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_me_plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="hero_area_plugin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,6 +291,21 @@
               <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
@@ -360,13 +427,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -491,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/about_me_plugin/templates/about_me_plugin/plugin/about_me_component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -558,13 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/js/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18683">
-          <caret line="1099" column="46" lean-forward="false" selection-start-line="1099" selection-start-column="38" selection-end-line="1099" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -658,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="57" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/portfolio_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -740,18 +787,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2312">
-          <caret line="142" column="83" lean-forward="true" selection-start-line="142" selection-start-column="83" selection-end-line="142" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/js/all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="1081" column="45" lean-forward="true" selection-start-line="1081" selection-start-column="45" selection-end-line="1081" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/contact_me_component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="119" column="57" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/contact_me.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>

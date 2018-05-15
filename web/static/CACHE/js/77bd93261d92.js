@@ -1,0 +1,1 @@
+;slugList=for(i=0;i<0;i++){$(".lightbox-gallery-"+slugList[i]).magnificPopup({gallery:{enabled:true}});}

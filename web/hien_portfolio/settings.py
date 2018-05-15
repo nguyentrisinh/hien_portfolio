@@ -139,6 +139,9 @@ INSTALLED_APPS = (
     'aldryn_style',
     'taggit_autosuggest',
 
+    # Compressor
+    "compressor",
+
     'hero_area_plugin',
     'about_me_plugin',
     'contact_me_plugin',
@@ -196,8 +199,8 @@ DATABASES = {
         # 'NAME': 'hien_portfolio_test_db_2',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
-        # 'HOST': 'localhost',
-        'HOST': 'db',
+        'HOST': 'localhost',
+        # 'HOST': 'db',
         'PORT': '',
     }
 }
@@ -212,3 +215,19 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
+
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSMinFilter',
+    'compressor.filters.datauri.CssDataUriFilter',
+]

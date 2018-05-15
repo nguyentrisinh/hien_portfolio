@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags compress %}
 
 {% block title %}
 Project {{ object.title }}
@@ -176,6 +176,7 @@ Project {{ object.title }}
     <!-- End Work Navigation -->
 
     {% addtoblock 'js' %}
+        {% compress js %}
         <script>
             $(".lightbox-gallery-{{ object.slug }}").magnificPopup({
                 gallery: {
@@ -183,7 +184,7 @@ Project {{ object.title }}
                 }
             });
         </script>
-
+        {% endcompress %}
     {% endaddtoblock %}
 
 {% endblock %}

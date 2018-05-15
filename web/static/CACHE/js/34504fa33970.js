@@ -1,0 +1,1 @@
+;$(".lightbox-gallery-").magnificPopup({gallery:{enabled:true}});

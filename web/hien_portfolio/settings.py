@@ -199,8 +199,8 @@ DATABASES = {
         # 'NAME': 'hien_portfolio_test_db_2',
         'USER': 'postgres',
         'PASSWORD': 'sinh1996',
-        'HOST': 'localhost',
-        # 'HOST': 'db',
+        # 'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '',
     }
 }

@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags compress %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
     {% addtoblock "css" %}
+        {% compress css %}
         <link rel="stylesheet" href="/hiennv/static/css/flaticon.css">
         <link rel="stylesheet" href="/hiennv/static/css/custom_flaticon.css">
+        {% endcompress %}
     {% endaddtoblock %}
 
     <!-- Introduction -->

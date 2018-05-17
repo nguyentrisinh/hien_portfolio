@@ -171,7 +171,6 @@ My Portfolio
     <!-- End Portfolio Section -->
 
     {% addtoblock 'js' %}
-        {% compress js %}
         <script>
         slugList = {{ slug_list|safe }}
             for (i = 0; i < {{ slug_list|length }}; i++) {
@@ -182,7 +181,6 @@ My Portfolio
                 });
             }
         </script>
-        {% endcompress %}
     {% endaddtoblock %}
 
 {% endblock %}

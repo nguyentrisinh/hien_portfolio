@@ -176,7 +176,7 @@ Project {{ object.title }}
     <!-- End Work Navigation -->
 
     {% addtoblock 'js' %}
-        {% compress js %}
+{#        {% compress js %}#}
         <script>
             $(".lightbox-gallery-{{ object.slug }}").magnificPopup({
                 gallery: {
@@ -184,7 +184,7 @@ Project {{ object.title }}
                 }
             });
         </script>
-        {% endcompress %}
+{#        {% endcompress %}#}
     {% endaddtoblock %}
 
 {% endblock %}

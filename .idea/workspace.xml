@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e71cf0e-64f9-47c8-bec4-fddd6f5de576" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/cms_plugins.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/cms_plugins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/portfolio_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +28,8 @@
       <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+            <state relative-caret-position="499">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -831,8 +824,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+        <state relative-caret-position="499">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>

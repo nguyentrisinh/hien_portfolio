@@ -12,7 +12,12 @@ Project {{ object.title }}
 
     <!-- Home Section -->
     <section class="home-section bg-dark-alfa-30 parallax-2"
-             data-background="{{ object.top_image.url }}" id="home">
+             {% if object.top_image == '' %}
+                data-background="/static/images/resources/device-bg-1.jpg"
+             {% else %}
+                data-background="{{ object.top_image.url }}"
+             {% endif %}
+             id="home">
 {#             data-background="/static/images/resources/device-bg-1.jpg" id="home">#}
         <div class="js-height-full container">
 

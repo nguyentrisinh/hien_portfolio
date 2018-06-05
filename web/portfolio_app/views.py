@@ -23,7 +23,11 @@ class ProjectIndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProjectIndexView, self).get_context_data(**kwargs)
-        object_list = context['object_list']
+        # object_list = context['object_list']
+
+        # Remove all unpublished project
+        object_list = Project.objects.filter(is_published=True, is_list_display=True)
+        context['object_list'] = object_list
 
         # get list of project slug for init popup image
         slug_list = []
@@ -53,7 +57,7 @@ class ProjectDetailView(generic.DetailView):
         # list project id to not make previous and next same project
         project_exclude_id = [object.id]
         # Get the next project
-        next_project = Project.objects.filter(updated_at__gte=object.updated_at) \
+        next_project = Project.objects.filter(updated_at__gte=object.updated_at, is_published=True) \
             .order_by('updated_at').exclude(id__in=project_exclude_id)
 
         if next_project.exists():
@@ -66,7 +70,7 @@ class ProjectDetailView(generic.DetailView):
         # end get next project
 
         # Get previous project
-        previous_project = Project.objects.filter(updated_at__lte=object.updated_at) \
+        previous_project = Project.objects.filter(updated_at__lte=object.updated_at, is_published=True) \
             .order_by('-updated_at').exclude(id__in=project_exclude_id)
 
         if previous_project.exists():

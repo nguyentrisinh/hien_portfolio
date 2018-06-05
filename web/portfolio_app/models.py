@@ -45,6 +45,10 @@ class Project(CMSPlugin):
     youtube_embed_url = models.CharField(max_length=255, null=True, blank=True, default='')
     top_image = models.ImageField(upload_to='portfolio/img/top_image/', max_length=500, null=False, blank=False,
                                   default='')
+
+    is_published = models.BooleanField(null=False, blank=False, default=True)
+    is_homepage_display = models.BooleanField(null=False, blank=False, default=True)
+    is_list_display = models.BooleanField(null=False, blank=False, default=True)
     # published_date = models.DateTimeField(null=True, blank=True)
 
     tags = models.ManyToManyField(Tag, verbose_name=_('tag'), related_name='project')

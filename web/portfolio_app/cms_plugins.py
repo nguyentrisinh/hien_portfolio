@@ -15,7 +15,7 @@ class LastestWorkSectionComponentPlugin(CMSPluginBase):
         context = super(LastestWorkSectionComponentPlugin, self).render(context, instance, placeholder)
 
         # get 3 latest project
-        project_list = Project.objects.all().order_by('-created_at')[:3]
+        project_list = Project.objects.filter(is_published=True, is_homepage_display=True).order_by('-created_at')[:3]
         context['project_list'] = project_list
 
         return context

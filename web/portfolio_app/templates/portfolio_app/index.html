@@ -64,6 +64,7 @@ My Portfolio
             <!-- Works Grid -->
             <ul class="works-grid work-grid-1 clearfix font-alt hover-white hide-titles" id="work-grid">
                 {% for project in object_list %}
+
                 <!-- Work Item (Lightbox) -->
                 <li class="work-item portfolio-item mix {% for tag in project.tags.all %} {{ tag.filter_tag }} {% endfor %}">
                     <div class="row">

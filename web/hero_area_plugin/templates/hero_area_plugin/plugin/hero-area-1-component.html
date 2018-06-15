@@ -1,0 +1,65 @@
+<!-- Call Action Section -->
+<section class="page-section pt-0 pb-20 banner-section bg-dark bg-scroll none-background-image"
+{#         style="margin-top: 0px; border-bottom: none; background-color: white;"#}
+         style="margin-top: 30px; border-bottom: none; background-size: auto 100%; background-position: right; background-color: white;"
+         data-background="{{ instance.background_image.url }}"
+    >
+    <div class="container relative">
+
+        <div class="row">
+
+            <div class="col-lg-7 col-md-7">
+
+                <div class="mt-140 mt-lg-80 mb-140 mb-lg-80">
+                    <div class="banner-content">
+                        <h2 class="hs-line-11 font-alt mb-20 mb-xs-0 hero-area-message margin-bottom-5">{{ instance.intro_title }} <span style="letter-spacing: 0px;">____</span></h2>
+                        <h3 class="banner-heading font-alt homepage-contact-me-title margin-bottom-10" style="color: black;">HIEN NGUYEN</h3>
+                        <div class="banner-decription homepage-contact-me-intro margin-bottom-25" style="color: black;">
+                            {{ instance.title }}
+                        </div>
+                        <hr class="margin-bottom-15"/>
+                        <div class="hero-area-1-message">
+                            {{ instance.introduction }}
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            {% for skill in about_me.skill_set.all %}
+            <div class="col-md-3 col-sm-6">
+                <div class="display-table">
+                    <div class="display-vertical-table-cell">
+                        <div class="service-icon skill-icon" style="width: 80px; height: 80px;">
+{#                            <span class="fa fa-android" style="color: #b2b2b2;"></span>#}
+                            {% if skill.skill_type == 1 %}
+                                <img src="/hiennv/static/images/resources/android.png" alt="" width="80px" height="80px"/>
+                            {% elif skill.skill_type == 2 %}
+                                <img src="/hiennv/static/images/resources/ios.png" alt="" width="80px" height="80px"/>
+                            {% elif skill.skill_type == 3 %}
+                                <img src="/hiennv/static/images/resources/reactnative.png" alt="" width="80px" height="80px"/>
+                            {% elif skill.skill_type == 4 %}
+                                <img src="/hiennv/static/images/resources/flutter.png" alt="" width="80px" height="80px"/>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="display-vertical-table-cell padding-left-15 skill-title">
+                        <div class="ci-title font-alt statistic-title ">
+                            {{ skill.name }}
+                        </div>
+                    </div>
+                </div>
+                <div class="margin-left-15 skill-statistic skill-statistic-font"><span class="count-number skill-statistic-font">{{ skill.percentage }}</span>%</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Call Action Section -->
+

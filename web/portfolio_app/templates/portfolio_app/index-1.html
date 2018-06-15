@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+{% load cms_tags sekizai_tags compress %}
+
+{% block title %}
+My Portfolio
+{% endblock %}
+
+{% block content %}
+    {% addtoblock 'css' %}
+
+    {% endaddtoblock %}
+
+    <!-- Head Section -->
+    <section class="page-section hero-area-padding">
+        <div class="relative container align-left">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="hs-line-11 font-alt mb-20 mb-xs-0 hero-area-message">Check out<span
+                            style="letter-spacing: 0px;">____</span></h2>
+                    <h1 class="hs-line-11 font-alt mb-20 mb-xs-0 hero-area-title">My Works</h1>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </section>
+    <!-- End Head Section -->
+
+        <!-- Portfolio Section -->
+    <section class="page-section" id="portfolioList">
+        <div class="container relative">
+
+            <!-- Works Filter -->
+            <div class="works-filter font-alt align-center">
+                <a href="#" class="filter active" data-filter="*">All works</a>
+                {% for tag in tags.all %}
+                    <a href="#{{ tag.filter_tag }}" class="filter" data-filter=".{{ tag.filter_tag }}">{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+            <!-- End Works Filter -->
+
+            <!-- Works Grid -->
+            <ul class="works-grid work-grid-1 clearfix font-alt hover-white hide-titles" id="work-grid">
+                {% for project in object_list %}
+                    {% if not forloop.counter|divisibleby:2 %}
+                        <!-- Work Item (Lightbox) -->
+                        <li class="work-item portfolio-item mix {% for tag in project.tags.all %} {{ tag.filter_tag }} {% endfor %}">
+                            <div class="row">
+                                <!-- Project detail -->
+                                <div class="col-md-6">
+                                    <h4 class="hero-area-message" style="margin-bottom: 15px!important;"><span style="letter-spacing: 0px;">____</span></h4>
+                                    <h4 class="font-alt mt-0 mb-20 display-table">
+                                        <a href="/hiennv/portfolio/{{ project.slug }}" class="pull-left project-title">
+                                            {{ project.title }}
+                                        </a>
+
+                                        <span class="display-vertical-table-cell padding-left-25 pull-left margin-top-12">
+                                            <img src="/hiennv/static/images/resources/arrows.svg" alt=""
+                                                 class="display-vertical-table-cell"/>
+                                        </span>
+        {#                                <ul class="pull-right ul-list-media-asset">#}
+                                        <ul class="pull-right ul-list-media-asset pull-left">
+
+                                            {% if project.android_demo_url != '' and project.android_demo_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.android_demo_url }}" target="_blank">
+                                                        <i class="portfolio-icon fa fa-android font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.ios_demo_url != '' and project.ios_demo_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.ios_demo_url }}" target="_blank">
+                                                        <i class="portfolio-icon fa fa-apple font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.demo_url != '' and project.demo_url is not None %}
+                                            <li class="portfolio-icon-li">
+                                                <a href="{{ project.demo_url }}" target="_blank">
+        {#                                            <i class="portfolio-icon fa fa-globe font-size-16 white"></i>#}
+                                                    <i class="portfolio-icon fa fa-link font-size-16 white"></i>
+                                                </a>
+                                            </li>
+                                            {% endif %}
+
+                                            {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.youtube_embed_url }}"
+                                                       class="lightbox mfp-iframe">
+                                                        <i class="portfolio-icon fa fa-youtube-play font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.mediaasset_set.all|length != 0 %}
+                                                <li class="portfolio-icon-li">
+                                                {% for media in project.mediaasset_set.all %}
+
+                                                    {% if forloop.first %}
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
+                                                        <i class="portfolio-icon fa fa-image font-size-16 white"></i>
+                                                    </a>
+                                                    {% else %}
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image display_none">
+                                                    </a>
+                                                    {% endif %}
+
+                                                {% endfor %}
+                                                </li>
+                                            {% endif %}
+
+                                        </ul>
+                                    </h4>
+
+                                    <div class="col-md-12 mb-sm-50 mb-xs-30 padding-0">
+                                        <!-- Project Detail -->
+                                        <div class="work-detail">
+                                            <div class="work-full-detail work-full-detail-no-border">
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Clients:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.client }}</span>
+                                                        </div>
+                                                    </div>
+        {#                                            <strong class="project-info-label">Clients:</strong>#}
+        {#                                            <span class="text-none-transform project-info-detail">{{ project.client }}</span>#}
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Length:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.length }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Roles:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.roles }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Skills:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.skills }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- End Project Detail -->
+                                </div>
+
+                                <div class="col-md-12 mb-sm-50 mb-xs-30 padding-0 text-normal project-detail margin-top-30">
+                                    <p>{{ project.short_description  }}</p>
+                                </div>
+
+                                </div>
+                                <!-- End Project Detail -->
+
+                                <!-- Project Top Image -->
+                                <div class="col-md-6 hidden-sm hidden-xs">
+                                    {% if project.top_image != '' %}
+                                        <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                    {% endif %}
+                                </div>
+                                <!-- End Project Top Image -->
+                            </div>
+                        </li>
+                        <!-- End Work Item -->
+                    {% else %}
+                        <li class="work-item portfolio-item mix {% for tag in project.tags.all %} {{ tag.filter_tag }} {% endfor %}">
+                            <div class="row">
+                                <!-- Project Top Image -->
+                                <div class="col-md-6 hidden-sm hidden-xs">
+                                    {% if project.top_image != '' %}
+                                        <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                    {% endif %}
+                                </div>
+                                <!-- End Project Top Image -->
+
+                                <!-- Project detail -->
+                                <div class="col-md-6">
+                                    <h4 class="hero-area-message" style="margin-bottom: 15px!important;"><span style="letter-spacing: 0px;">____</span></h4>
+                                    <h4 class="font-alt mt-0 mb-20 display-table">
+                                        <a href="/hiennv/portfolio/{{ project.slug }}" class="pull-left project-title">
+                                            {{ project.title }}
+                                        </a>
+
+                                        <span class="display-vertical-table-cell padding-left-25 pull-left margin-top-12">
+                                            <img src="/hiennv/static/images/resources/arrows.svg" alt=""
+                                                 class="display-vertical-table-cell"/>
+                                        </span>
+        {#                                <ul class="pull-right ul-list-media-asset">#}
+                                        <ul class="pull-right ul-list-media-asset pull-left">
+
+                                            {% if project.android_demo_url != '' and project.android_demo_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.android_demo_url }}" target="_blank">
+                                                        <i class="portfolio-icon fa fa-android font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.ios_demo_url != '' and project.ios_demo_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.ios_demo_url }}" target="_blank">
+                                                        <i class="portfolio-icon fa fa-apple font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.demo_url != '' and project.demo_url is not None %}
+                                            <li class="portfolio-icon-li">
+                                                <a href="{{ project.demo_url }}" target="_blank">
+        {#                                            <i class="portfolio-icon fa fa-globe font-size-16 white"></i>#}
+                                                    <i class="portfolio-icon fa fa-link font-size-16 white"></i>
+                                                </a>
+                                            </li>
+                                            {% endif %}
+
+                                            {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
+                                                <li class="portfolio-icon-li">
+                                                    <a href="{{ project.youtube_embed_url }}"
+                                                       class="lightbox mfp-iframe">
+                                                        <i class="portfolio-icon fa fa-youtube-play font-size-16 white"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            {% if project.mediaasset_set.all|length != 0 %}
+                                                <li class="portfolio-icon-li">
+                                                {% for media in project.mediaasset_set.all %}
+
+                                                    {% if forloop.first %}
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
+                                                        <i class="portfolio-icon fa fa-image font-size-16 white"></i>
+                                                    </a>
+                                                    {% else %}
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image display_none">
+                                                    </a>
+                                                    {% endif %}
+
+                                                {% endfor %}
+                                                </li>
+                                            {% endif %}
+
+                                        </ul>
+                                    </h4>
+
+                                    <div class="col-md-12 mb-sm-50 mb-xs-30 padding-0">
+                                        <!-- Project Detail -->
+                                        <div class="work-detail">
+                                            <div class="work-full-detail work-full-detail-no-border">
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Clients:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.client }}</span>
+                                                        </div>
+                                                    </div>
+        {#                                            <strong class="project-info-label">Clients:</strong>#}
+        {#                                            <span class="text-none-transform project-info-detail">{{ project.client }}</span>#}
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Length:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.length }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Roles:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.roles }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                                <p>
+                                                    <div class="row">
+                                                        <div class="col-xs-2">
+                                                            <strong class="project-info-label">Skills:</strong>
+                                                        </div>
+
+                                                        <div class="col-xs-10">
+                                                            <span class="text-none-transform project-info-detail">{{ project.skills }}</span>
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- End Project Detail -->
+                                </div>
+
+                                <div class="col-md-12 mb-sm-50 mb-xs-30 padding-0 text-normal project-detail margin-top-30">
+                                    <p>{{ project.short_description  }}</p>
+                                </div>
+
+                                </div>
+                                <!-- End Project detail -->
+                            </div>
+                        </li>
+                    {% endif %}
+
+                {% endfor %}
+
+            </ul>
+            <!-- End Works Grid -->
+
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    {% addtoblock 'js' %}
+        <script>
+        slugList = {{ slug_list|safe }}
+            for (i = 0; i < {{ slug_list|length }}; i++) {
+                $(".lightbox-gallery-" + slugList[i]).magnificPopup({
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            }
+        </script>
+    {% endaddtoblock %}
+
+{% endblock %}

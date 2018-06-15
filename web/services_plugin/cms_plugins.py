@@ -10,7 +10,7 @@ from .admin import ServiceItemInline
 class ServicesComponentPlugin(CMSPluginBase):
     model = ServicesComponent
     inlines = [ServiceItemInline]
-    render_template = 'services_plugin/plugin/services_component.html'
+    render_template = 'services_plugin/plugin/homepage_services_component.html'
     cache = False
 
     def render(self, context, instance, placeholder):

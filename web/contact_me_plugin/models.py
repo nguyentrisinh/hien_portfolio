@@ -10,6 +10,8 @@ class ContactMe(CMSPlugin):
     address = models.CharField(max_length=250, blank=False, null=False)
     email = models.EmailField(max_length=150, blank=False, null=False)
 
+    background_image = models.ImageField(upload_to='contact_me/img/', null=True, blank=True, default='')
+
     def __str__(self):
         return self.email
 

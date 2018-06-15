@@ -1,5 +1,5 @@
-<!-- Head Section -->
-<section class="page-section bg-dark-alfa-70 parallax-3" data-background="{{ instance.background_image.url }}">
+{#<!-- Head Section -->#}
+<section class="page-section bg-dark-alfa-70 parallax-3" {% if instance.background_image != '' %} data-background="{{ instance.background_image.url }}" {% endif %}>
     <div class="relative container align-left">
 
         <div class="row">
@@ -21,4 +21,4 @@
 
     </div>
 </section>
-<!-- End Head Section -->
+{#<!-- End Head Section -->#}

@@ -12,7 +12,8 @@ from .models import Project, Tag, MediaAsset
 # Create your views here.
 class ProjectIndexView(generic.ListView):
     model = Project
-    template_name = 'portfolio_app/index.html'
+    # template_name = 'portfolio_app/index.html'
+    template_name = 'portfolio_app/index-1.html'
 
     def get_queryset(self):
         qs = super(ProjectIndexView, self).get_queryset()

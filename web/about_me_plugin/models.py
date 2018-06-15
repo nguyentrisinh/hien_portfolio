@@ -5,6 +5,13 @@ from django.utils.translation import ugettext_lazy as _
 from cms.models.pluginmodel import CMSPlugin
 
 
+SKILL_CHOICES = (
+    (1, 'Android'),
+    (2, 'IOS'),
+    (3, 'React Native'),
+    (4, 'Flutter'),
+)
+
 # Create your models here.
 class AboutMe(models.Model):
     objects = models.Manager()
@@ -24,6 +31,8 @@ class Skill(models.Model):
 
     name = models.CharField(max_length=100, null=False, blank=False)
     percentage = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+
+    skill_type = models.SmallIntegerField(choices=SKILL_CHOICES, default=1)
 
     about_me_id = models.ForeignKey(AboutMe, on_delete=models.CASCADE)
 

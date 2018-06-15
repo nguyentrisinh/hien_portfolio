@@ -24,6 +24,37 @@ class ContactMeComponentPlugin(CMSPluginBase):
 
 
 @plugin_pool.register_plugin
+class ContactMeOneComponentPlugin(CMSPluginBase):
+    model = ContactMe
+    render_template = 'contact_me_plugin/plugin/contact_me_one_component.html'
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        context = super(ContactMeOneComponentPlugin, self).render(context, instance, placeholder)
+
+        request = context['request']
+
+        if request.GET.get('name') is not None:
+            message = Message(name=request.GET.get('name'), email=request.GET.get('email'),
+                              message=request.GET.get('message'))
+            message.save()
+
+        return context
+
+
+@plugin_pool.register_plugin
+class HomepageContactMeOneComponentPlugin(CMSPluginBase):
+    model = ContactMe
+    render_template = 'contact_me_plugin/plugin/homepage-contact-me-1-component.html'
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        context = super(HomepageContactMeOneComponentPlugin, self).render(context, instance, placeholder)
+
+        return context
+
+
+@plugin_pool.register_plugin
 class GoogleMapComponentPlugin(CMSPluginBase):
     model = GoogleMap
     render_template = 'contact_me_plugin/plugin/google_map_component.html'

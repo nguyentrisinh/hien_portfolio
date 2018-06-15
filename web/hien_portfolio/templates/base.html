@@ -36,71 +36,72 @@
 
                 <!-- Page Wrap -->
         <div class="page" id="top">
-            <!-- Navigation panel -->
-            <nav class="main-nav dark transparent stick-fixed">
-                <div class="full-wrapper relative clearfix">
-                    <!-- Logo ( * your text or image into link tag *) -->
-                    <div class="nav-logo-wrap local-scroll">
-                        <a href="/hiennv/" class="logo">
-{#                            <img src="/static/images/logo-white.png" alt="" />#}
-                            <img src="/hiennv/static/images/logo.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="mobile-nav">
-                        <i class="fa fa-bars"></i>
-                    </div>
+                <!-- Navigation panel -->
+{#                <nav class="main-nav dark transparent stick-fixed">#}
+                <nav class="main-nav header-sticky stick-fixed">
+                    <div class="container">
+                    <div class="full-wrapper relative clearfix">
+                        <!-- Logo ( * your text or image into link tag *) -->
+                        <div class="nav-logo-wrap local-scroll">
+                            <a href="/hiennv/" class="logo">
+                                {#                            <img src="/static/images/logo-white.png" alt="" />#}
+{#                                <img src="/hiennv/static/images/logo.png" alt=""/>#}
+                                <img src="/hiennv/static/images/logo/logo.png" alt=""/>
+                            </a>
+                        </div>
+                        <div class="mobile-nav">
+                            <i class="fa fa-bars"></i>
+                        </div>
 
-                    <!-- Main Menu -->
-                    <div class="inner-nav desktop-nav">
-                        <ul class="clearlist">
-                            {% show_menu 0 100 100 100 %}
-                            <li>
-                                <a href="https://www.upwork.com/o/profiles/users/_~0131ce37852f56f9af/"
-                                   target="_blank"
-                                   class="hire_me_btn_style"
-                                >Hire Me</a>
-                            </li>
-                        </ul>
+                        <!-- Main Menu -->
+                        <div class="inner-nav desktop-nav">
+                            <ul class="clearlist">
+                                {% show_menu 0 100 100 100 %}
+                                <li>
+                                    <a href="https://www.upwork.com/o/profiles/users/_~0131ce37852f56f9af/"
+                                       target="_blank"
+                                       class="hire-me-btn-style-1"
+                                    ><span class="hire-me-button">Hire Me</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Main Menu -->
                     </div>
-                    <!-- End Main Menu -->
-                </div>
-            </nav>
-            <!-- End Navigation panel -->
+                    </div>
+                </nav>
+                <!-- End Navigation panel -->
+
 
             {% block content %}{% endblock content %}
 
-                        <!-- Foter -->
-            <footer class="page-section bg-gray-lighter footer pb-60">
+            <!-- Foter -->
+            <footer class="page-section footer pb-70 bg-dark pt-70">
                 <div class="container">
 
-                    <!-- Footer Logo -->
-                    <div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
-                        <!--<a href="#top"><img src="/static/images/logo-footer.png" width="78" height="36" alt="" /></a>-->
-                        <a href="#top"><img src="/hiennv/static/images/hien_icon.JPEG" width="78" height="78" alt="" /></a>
-                    </div>
-                    <!-- End Footer Logo -->
-
-                    <!-- Social Links -->
-                    <div class="footer-social-links mb-110 mb-xs-60">
-                        <a href="https://www.facebook.com/hiennguyen92" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/hiennvan" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/hiennv/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                    <!-- End Social Links -->
 
                     <!-- Footer Text -->
                     <div class="footer-text">
+                        <!-- Social Links -->
+                        <div class="footer-social-links mb-110 mb-xs-60 pull-left font-size-18" style="margin-top: auto; margin-bottom: auto;">
+                            <a href="https://www.facebook.com/hiennguyen92" title="Facebook" target="_blank"><i class="fa fa-facebook" style="color: #a9aaad;"></i></a>
+                            <a href="https://twitter.com/hiennvan" title="Twitter" target="_blank"><i class="fa fa-twitter" style="color: #a9aaad;"></i></a>
+                            <a href="https://www.linkedin.com/in/hiennv/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin" style="color: #a9aaad;" ></i></a>
+                        </div>
+                        <!-- End Social Links -->
 
                         <!-- Copyright -->
-                        <div class="footer-copy font-alt">
-                            <!--<a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Sinh Nguyen 2018</a>.-->
-                            <a href="http://guru.agiledevops.io/hiennv/" target="_blank">&copy; Hien Nguyen 2018</a>.
-                        </div>
-                        <!-- End Copyright -->
+                        <div class="pull-right footer-detail">
+                            <div class="footer-copy font-alt ">
+                                <!--<a href="http://themeforest.net/user/theme-guru/portfolio" target="_blank">&copy; Sinh Nguyen 2018</a>.-->
+                                <a href="http://guru.agiledevops.io/hiennv/" target="_blank" class="footer-detail">&copy; Hien Nguyen 2018</a>.
+                            </div>
+                            <!-- End Copyright -->
 
-                        <div class="footer-made">
-                            Made with love for great people.
+                            <div class="footer-made">
+                                Made with love for great people.
+                            </div>
                         </div>
+
 
                     </div>
                     <!-- End Footer Text -->
@@ -140,6 +141,7 @@
         <script type="text/javascript" src="/hiennv/static/js/masonry.pkgd.min.js"></script>
         <script type="text/javascript" src="/hiennv/static/js/jquery.simple-text-rotator.min.js"></script>
         <script type="text/javascript" src="/hiennv/static/js/all.js"></script>
+        <script type="text/javascript" src="/hiennv/static/js/custom.js"></script>
         <script type="text/javascript" src="/hiennv/static/js/contact-form.js"></script>
         <script type="text/javascript" src="/hiennv/static/js/jquery.ajaxchimp.min.js"></script>
 {#        {% endcompress %}#}

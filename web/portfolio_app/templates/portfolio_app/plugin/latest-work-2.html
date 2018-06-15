@@ -1,0 +1,52 @@
+<!-- Features Section -->
+<section class="page-section padding-top-70" id="portfolio">
+    <div class="container relative">
+        <h4 class="hero-area-message" style="margin-bottom: 15px!important;"><span style="letter-spacing: 0px;">____</span></h4>
+
+        <h2 class="section-title font-alt mb-70 mb-sm-40 homepage-section-title display-table margin-bottom-10 margin-top-15">
+            Latest Works
+            <span class="display-vertical-table-cell padding-left-15" >
+                <img src="/hiennv/static/images/resources/arrows.svg" alt="" class="display-vertical-table-cell"/>
+            </span>
+        </h2>
+
+        <p class="latest-work-introduce" style="max-width: 725px;">{{ instance.message }}</p>
+
+        <!-- Works Grid -->
+        <ul class="works-grid work-grid-2 work-grid-gut clearfix font-alt hover-white hide-titles" id="work-grid">
+
+            {% for project in project_list %}
+                <!-- Work Item (External Page) -->
+                <li class="work-item work-grid-padding">
+{#                    <a href="/hiennv/portfolio/{{ project.slug }}" class="work-ext-link work-grid-shadow">#}
+                    <a href="#portfolio" class="work-ext-link work-grid-shadow">
+                        <div class="work-img">
+                            <img class="work-img" src="{{ project.top_image.url }}" alt="Work"/>
+                        </div>
+                        <div class="work-intro">
+                            <h3 class="work-title">{{ project.title }}</h3>
+                        </div>
+                    </a>
+                </li>
+                <!-- End Work Item -->
+            {% endfor %}
+
+        </ul>
+        <!-- End Works Grid -->
+        <div style="width: 100%;">
+            <a href="/hiennv/portfolio"
+               class="btn btn-mod btn-w btn-medium btn-round display-table padding-left-30 padding-right-30 more-work-btn"
+               style="position: relative; margin-left: auto; margin-right: auto; top: 52px;"
+            >
+                <span class="display-vertical-table-cell" style="text-align: left;">
+                    More works
+                </span>
+                <img src="/hiennv/static/images/resources/ic-arrow.svg" alt=""
+                     class="display-vertical-table-cell"
+                     style="text-align: right; position: absolute; top: 25px; left:220px"
+                />
+            </a>
+        </div>
+    </div>
+</section>
+<!-- End Features Section -->

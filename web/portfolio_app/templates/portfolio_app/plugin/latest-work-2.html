@@ -13,7 +13,7 @@
         <p class="latest-work-introduce" style="max-width: 725px;">{{ instance.message }}</p>
 
         <!-- Works Grid -->
-        <ul class="works-grid work-grid-2 work-grid-gut clearfix font-alt hover-white hide-titles" id="work-grid">
+        <ul class="works-grid work-grid-2 work-grid-gut clearfix font-alt hover-white hide-titles height-unset" id="work-grid" style="display: inline-block;">
 
             {% for project in project_list %}
                 <!-- Work Item (External Page) -->
@@ -33,10 +33,10 @@
 
         </ul>
         <!-- End Works Grid -->
-        <div style="width: 100%;">
+        <div style="width: 100%; margin-top: 52px;">
             <a href="/hiennv/portfolio"
                class="btn btn-mod btn-w btn-medium btn-round display-table padding-left-30 padding-right-30 more-work-btn"
-               style="position: relative; margin-left: auto; margin-right: auto; top: 52px;"
+               style="position: relative; margin-left: auto; margin-right: auto;"
             >
                 <span class="display-vertical-table-cell" style="text-align: left;">
                     More works

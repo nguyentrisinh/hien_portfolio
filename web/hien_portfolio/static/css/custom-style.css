@@ -480,6 +480,10 @@ margin-tơp-70 {
     color: #a9aaad;
 }
 
+.height-unset {
+    height: unset!important
+}
+
 .skill-icon {
     width: 80px;
     height: 80px;

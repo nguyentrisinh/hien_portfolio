@@ -535,8 +535,24 @@ margin-tơp-70 {
 
 @media screen and (min-width: 1025px) {
     .hire-me-button {
-        background: black;
+        background: #37a200;
         padding: 7px 23px;
         color: white;
+        transition-duration: 0.3s;
+    }
+
+    .hire-me-button:hover {
+        background: #48e300;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hire-me-button {
+        color: #37a000;
+        transition-duration: 0.3s;
+    }
+
+    .hire-me-button:hover {
+        background: #48e300;
     }
 }

@@ -15,22 +15,22 @@
 
             {% for service in instance.serviceitem_set.all %}
             <!-- Features Item -->
-            <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="alt-features-item">
-{#                <div class="alt-features-item align-center">#}
-                    <div class="alt-features-icon">
-                        <div class="service-icon">
-                            <span class="{{ service.icon_class_name }}"></span>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="alt-features-item">
+    {#                <div class="alt-features-item align-center">#}
+                        <div class="alt-features-icon">
+                            <div class="service-icon">
+                                <span class="{{ service.icon_class_name }}"></span>
+                            </div>
+                        </div>
+                        <h3 class="alt-features-title font-alt margin-top-35">{{ service.title }}</h3>
+                        <div class="alt-features-descr">
+    {#                    <div class="alt-features-descr align-center">#}
+                            {{ service.content }}
                         </div>
                     </div>
-                    <h3 class="alt-features-title font-alt margin-top-35">{{ service.title }}</h3>
-                    <div class="alt-features-descr">
-{#                    <div class="alt-features-descr align-center">#}
-                        {{ service.content }}
-                    </div>
                 </div>
-            </div>
-            <!-- End Features Item -->
+                <!-- End Features Item -->
 
             {% endfor %}
 

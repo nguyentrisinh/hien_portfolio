@@ -6,22 +6,22 @@
                 <div class="row">
                     {% for statistic in about_me.statistic_set.all %}
                         <div class="col-sm-6 padding-all-30">
-                        <div class="display-table">
-                            <div class="display-vertical-table-cell">
-                                <div class="service-icon" style="width: 80px; height: 80px;">
-                                    <span class="fa {{ statistic.fa_icon }} font-size-25"></span>
+                            <div class="display-table">
+                                <div class="display-vertical-table-cell">
+                                    <div class="service-icon" style="width: 80px; height: 80px;">
+                                        <span class="fa {{ statistic.fa_icon }} font-size-25"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="display-vertical-table-cell padding-left-15">
-                                <div class="ci-title font-alt statistic-title">
-                                    {{ statistic.title }}
-                                </div>
-                                <div class="ci-text">
-                                    <span class="count-number statistic-font">{{ statistic.statistic }}</span>
+                                <div class="display-vertical-table-cell padding-left-15">
+                                    <div class="ci-title font-alt statistic-title">
+                                        {{ statistic.title }}
+                                    </div>
+                                    <div class="ci-text">
+                                        <span class="count-number statistic-font">{{ statistic.statistic }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
 

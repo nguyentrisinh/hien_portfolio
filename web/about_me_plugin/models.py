@@ -12,6 +12,7 @@ SKILL_CHOICES = (
     (4, 'Flutter'),
 )
 
+
 # Create your models here.
 class AboutMe(models.Model):
     objects = models.Manager()

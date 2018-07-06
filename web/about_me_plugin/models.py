@@ -26,6 +26,9 @@ class AboutMe(models.Model):
     def __str__(self):
         return self.title
 
+    def order_by_percentage_skill_set(self):
+        return self.skill_set.order_by('-percentage')
+
 
 class Skill(models.Model):
     objects = models.Manager()

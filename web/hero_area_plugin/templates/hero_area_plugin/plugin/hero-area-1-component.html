@@ -32,7 +32,8 @@
         </div>
 
         <div class="row">
-            {% for skill in about_me.skill_set.all %}
+{#            {% for skill in about_me.skill_set.all %}#}
+            {% for skill in about_me.order_by_percentage_skill_set.all %}
             <div class="col-md-3 col-sm-6">
                 <div class="display-table">
                     <div class="display-vertical-table-cell">

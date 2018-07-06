@@ -62,25 +62,28 @@ My Portfolio
 
                                             {% if project.android_demo_url != '' and project.android_demo_url is not None %}
                                                 <li class="portfolio-icon-li">
-                                                    <a href="{{ project.android_demo_url }}" target="_blank">
+                                                    <a href="{{ project.android_demo_url }}" target="_blank" class="tooltip-custom">
                                                         <i class="portfolio-icon fa fa-android font-size-16 white"></i>
+                                                        <span class="tooltiptext">Android Demo</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
 
                                             {% if project.ios_demo_url != '' and project.ios_demo_url is not None %}
                                                 <li class="portfolio-icon-li">
-                                                    <a href="{{ project.ios_demo_url }}" target="_blank">
+                                                    <a href="{{ project.ios_demo_url }}" target="_blank" class="tooltip-custom">
                                                         <i class="portfolio-icon fa fa-apple font-size-16 white"></i>
+                                                        <span class="tooltiptext">IOS Demo</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
 
                                             {% if project.demo_url != '' and project.demo_url is not None %}
                                             <li class="portfolio-icon-li">
-                                                <a href="{{ project.demo_url }}" target="_blank">
+                                                <a href="{{ project.demo_url }}" target="_blank" class="tooltip-custom">
         {#                                            <i class="portfolio-icon fa fa-globe font-size-16 white"></i>#}
                                                     <i class="portfolio-icon fa fa-link font-size-16 white"></i>
+                                                    <span class="tooltiptext">Demo Url</span>
                                                 </a>
                                             </li>
                                             {% endif %}
@@ -88,8 +91,9 @@ My Portfolio
                                             {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
                                                 <li class="portfolio-icon-li">
                                                     <a href="{{ project.youtube_embed_url }}"
-                                                       class="lightbox mfp-iframe">
+                                                       class="lightbox mfp-iframe tooltip-custom">
                                                         <i class="portfolio-icon fa fa-youtube-play font-size-16 white"></i>
+                                                        <span class="tooltiptext">Demo Video</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
@@ -99,8 +103,10 @@ My Portfolio
                                                 {% for media in project.mediaasset_set.all %}
 
                                                     {% if forloop.first %}
-                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
-                                                        <i class="portfolio-icon fa fa-image font-size-16 white"></i>
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image tooltip-custom">
+                                                        <i class="portfolio-icon fa fa-image font-size-16 white">
+                                                        </i>
+                                                        <span class="tooltiptext">Images</span>
                                                     </a>
                                                     {% else %}
                                                     <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image display_none">
@@ -178,8 +184,14 @@ My Portfolio
 
                                 <!-- Project Top Image -->
                                 <div class="col-md-6 hidden-sm hidden-xs">
-                                    {% if project.top_image != '' %}
-                                        <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                    {% if project.top_image != '' and project.top_image is not None%}
+                                        {% if project.mediaasset_set.all|length > 0%}
+                                        <a href="{{ project.top_image.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
+                                            <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                        </a>
+                                        {% else %}
+                                            <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                        {% endif %}
                                     {% endif %}
                                 </div>
                                 <!-- End Project Top Image -->
@@ -191,8 +203,14 @@ My Portfolio
                             <div class="row">
                                 <!-- Project Top Image -->
                                 <div class="col-md-6 hidden-sm hidden-xs">
-                                    {% if project.top_image != '' %}
-                                        <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                    {% if project.top_image != '' and project.top_image is not None%}
+                                        {% if project.mediaasset_set.all|length > 0%}
+                                        <a href="{{ project.top_image.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
+                                            <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                        </a>
+                                        {% else %}
+                                            <img src="{{ project.top_image.url }}" class="top-image-list margin-top-65">
+                                        {% endif %}
                                     {% endif %}
                                 </div>
                                 <!-- End Project Top Image -->
@@ -214,25 +232,28 @@ My Portfolio
 
                                             {% if project.android_demo_url != '' and project.android_demo_url is not None %}
                                                 <li class="portfolio-icon-li">
-                                                    <a href="{{ project.android_demo_url }}" target="_blank">
+                                                    <a href="{{ project.android_demo_url }}" target="_blank" class="tooltip-custom">
                                                         <i class="portfolio-icon fa fa-android font-size-16 white"></i>
+                                                        <span class="tooltiptext">Android Demo</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
 
                                             {% if project.ios_demo_url != '' and project.ios_demo_url is not None %}
                                                 <li class="portfolio-icon-li">
-                                                    <a href="{{ project.ios_demo_url }}" target="_blank">
+                                                    <a href="{{ project.ios_demo_url }}" target="_blank" class="tooltip-custom">
                                                         <i class="portfolio-icon fa fa-apple font-size-16 white"></i>
+                                                        <span class="tooltiptext">IOS Demo</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
 
                                             {% if project.demo_url != '' and project.demo_url is not None %}
                                             <li class="portfolio-icon-li">
-                                                <a href="{{ project.demo_url }}" target="_blank">
+                                                <a href="{{ project.demo_url }}" target="_blank" class="tooltip-custom">
         {#                                            <i class="portfolio-icon fa fa-globe font-size-16 white"></i>#}
                                                     <i class="portfolio-icon fa fa-link font-size-16 white"></i>
+                                                    <span class="tooltiptext">Demo Url</span>
                                                 </a>
                                             </li>
                                             {% endif %}
@@ -240,8 +261,9 @@ My Portfolio
                                             {% if project.youtube_embed_url != '' and project.youtube_embed_url is not None %}
                                                 <li class="portfolio-icon-li">
                                                     <a href="{{ project.youtube_embed_url }}"
-                                                       class="lightbox mfp-iframe">
+                                                       class="lightbox mfp-iframe tooltip-custom">
                                                         <i class="portfolio-icon fa fa-youtube-play font-size-16 white"></i>
+                                                        <span class="tooltiptext">Demo Video</span>
                                                     </a>
                                                 </li>
                                             {% endif %}
@@ -251,8 +273,10 @@ My Portfolio
                                                 {% for media in project.mediaasset_set.all %}
 
                                                     {% if forloop.first %}
-                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image">
-                                                        <i class="portfolio-icon fa fa-image font-size-16 white"></i>
+                                                    <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image tooltip-custom">
+                                                        <i class="portfolio-icon fa fa-image font-size-16 white">
+                                                        </i>
+                                                        <span class="tooltiptext">Images</span>
                                                     </a>
                                                     {% else %}
                                                     <a href="{{ media.media_asset.url }}" class="lightbox-gallery-{{ project.slug }} mfp-image display_none">

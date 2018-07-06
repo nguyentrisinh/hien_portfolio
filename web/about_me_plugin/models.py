@@ -12,6 +12,12 @@ SKILL_CHOICES = (
     (4, 'Flutter'),
 )
 
+STATISTIC_TYPE_CHOICES = (
+    (1, 'Number'),
+    (2, 'Percentage'),
+    (3, 'Money'),
+)
+
 
 # Create your models here.
 class AboutMe(models.Model):
@@ -53,6 +59,8 @@ class Statistic(models.Model):
     title = models.CharField(max_length=100, blank=False, null=False, default='')
     statistic = models.CharField(max_length=20, null=False, blank=False, default='')
     fa_icon = models.CharField(max_length=80, null=False, blank=False, default='')
+
+    statistic_type = models.PositiveSmallIntegerField(choices=STATISTIC_TYPE_CHOICES, null=False, default=1)
 
     about_me_id = models.ForeignKey(AboutMe, on_delete=models.CASCADE)
 

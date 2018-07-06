@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e71cf0e-64f9-47c8-bec4-fddd6f5de576" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/about_me_plugin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/about_me_plugin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/about_me_plugin/templates/about_me_plugin/plugin/about-me-2-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/about_me_plugin/templates/about_me_plugin/plugin/about-me-2-component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/portfolio_app/views.py">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+            <state relative-caret-position="290">
+              <caret line="99" selection-start-line="99" selection-start-column="2" selection-end-line="101" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -75,8 +75,8 @@
       <file leaf-file-name="custom-style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="400" column="17" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="172" column="26" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -142,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>S</find>
       <find>lightbox</find>
       <find>magnificPopup</find>
       <find>&lt;a href=&quot;/portfolio/{{ project.slug }}&quot;&gt;</find>
@@ -172,6 +171,7 @@
       <find>portfolio-icon-li</find>
       <find>project-info-lable</find>
       <find>client</find>
+      <find>general</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,16 +221,16 @@
         <option value="$PROJECT_DIR$/web/testimonial_plugin/templates/testimonial_plugin/plugin/testimonial_component.html" />
         <option value="$PROJECT_DIR$/web/contact_me_plugin/templates/contact_me_plugin/plugin/homepage-contact-me-1-component.html" />
         <option value="$PROJECT_DIR$/web/hero_area_plugin/cms_plugins.py" />
-        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/plugin/latest-work-2.html" />
         <option value="$PROJECT_DIR$/web/services_plugin/templates/services_plugin/plugin/homepage_services_component.html" />
         <option value="$PROJECT_DIR$/web/hero_area_plugin/templates/hero_area_plugin/plugin/hero-area-1-component.html" />
         <option value="$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index-1.html" />
-        <option value="$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css" />
         <option value="$PROJECT_DIR$/web/about_me_plugin/models.py" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/web/about_me_plugin/templates/about_me_plugin/plugin/about-me-2-component.html" />
         <option value="$PROJECT_DIR$/web/hien_portfolio/settings.py" />
+        <option value="$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css" />
+        <option value="$PROJECT_DIR$/web/hien_portfolio/templates/base.html" />
       </list>
     </option>
   </component>
@@ -342,15 +342,7 @@
               <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="hien_portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hien_portfolio" type="b2602c69:ProjectViewProjectNode" />
@@ -463,12 +455,12 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005208" side_tool="true" weight="0.34750265" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.34750265" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49947917" visible="true" weight="0.34750265" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49895832" visible="true" weight="0.34750265" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22864583" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
@@ -701,13 +693,6 @@
     <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom_flaticon.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/services_plugin/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -787,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/hero_area_plugin/templates/hero_area_plugin/plugin/hero-area-1-component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/portfolio_app/templates/portfolio_app/index-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -815,13 +793,6 @@
             <element signature="e#17317#17399#0#DjangoTemplate" />
             <element signature="e#18109#18156#0#DjangoTemplate" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="400" column="17" selection-start-line="400" selection-start-column="17" selection-end-line="400" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -850,6 +821,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="206" column="19" lean-forward="true" selection-start-line="206" selection-start-column="19" selection-end-line="206" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hero_area_plugin/templates/hero_area_plugin/plugin/hero-area-1-component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/static/css/custom-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="172" column="26" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hien_portfolio/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="99" selection-start-line="99" selection-start-column="2" selection-end-line="101" selection-end-column="36" />
         </state>
       </provider>
     </entry>

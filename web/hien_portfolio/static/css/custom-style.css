@@ -169,6 +169,10 @@ margin-tơp-70 {
     text-transform: none;
 }
 
+.link-to-top {
+    color: #888!important;
+}
+
 /* Menu style */
 .main-nav {
     background: rgba(255, 255, 255, 1);

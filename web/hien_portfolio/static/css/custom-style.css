@@ -8,7 +8,7 @@
 }
 
 .hire-me-btn-style-1 {
-    color: white!important;
+    color: white !important;
 }
 
 .alt-features-title {
@@ -21,20 +21,20 @@
 }
 
 .display-table {
-    display: table!important;
+    display: table !important;
 }
 
 .display-vertical-table-cell {
-    display: table-cell!important;
+    display: table-cell !important;
     vertical-align: middle;
 }
 
 .letter-spacing-0 {
-    letter-spacing: 0px!important;
+    letter-spacing: 0px !important;
 }
 
 .letter-spacing-1 {
-    letter-spacing: 1px!important;
+    letter-spacing: 1px !important;
 }
 
 .font-size-14 {
@@ -66,7 +66,7 @@
 }
 
 .padding-0 {
-    padding: 0px!important;
+    padding: 0px !important;
 }
 
 .padding-left-10 {
@@ -170,7 +170,7 @@ margin-tơp-70 {
 }
 
 .link-to-top {
-    color: #888!important;
+    color: #888 !important;
 }
 
 /* Menu style */
@@ -202,8 +202,8 @@ margin-tơp-70 {
 }
 
 .hero-area-padding {
-    padding-top: 170px!important;
-    padding-bottom: 0px!important
+    padding-top: 170px !important;
+    padding-bottom: 0px !important
 }
 
 /*services sty;e*/
@@ -229,13 +229,24 @@ margin-tơp-70 {
     letter-spacing: 1px;
 }
 
+.services-description {
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #6a696a;
+}
+
 /* Portfolio Style */
 .work-grid-1 .work-item {
     width: 100%;
 }
 
 .display_none {
-    display: none!important;
+    display: none !important;
 }
 
 .text-normal {
@@ -243,8 +254,8 @@ margin-tơp-70 {
 }
 
 .ul-list-media-asset li {
-    display: inline!important;
-    list-style-type: none!important;
+    display: inline !important;
+    list-style-type: none !important;
 }
 
 .portfolio-icon {
@@ -257,11 +268,11 @@ margin-tơp-70 {
 }
 
 .portfolio-icon-item:hover {
-    opacity: 0.8!important;
+    opacity: 0.8 !important;
 }
 
 .ul-list-media-asset li a {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .portfolio-item {
@@ -320,13 +331,13 @@ margin-tơp-70 {
 }
 
 .work-full-detail-no-border p {
-    border-top: none!important;
-    border-bottom: none!important;
+    border-top: none !important;
+    border-bottom: none !important;
 }
 
 .work-full-detail-no-border p:last-child {
-    border-top: none!important;
-    border-bottom: none!important;
+    border-top: none !important;
+    border-bottom: none !important;
 }
 
 /* Portfolio style*/
@@ -339,7 +350,7 @@ margin-tơp-70 {
     letter-spacing: 1px;
     text-align: left;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .project-info-label {
@@ -354,6 +365,7 @@ margin-tơp-70 {
 }
 
 .project-info-detail {
+    font-family: SFUIText;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -365,19 +377,18 @@ margin-tơp-70 {
 }
 
 .project-detail {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: normal;
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.14;
+    line-height: 1.5;
     letter-spacing: normal;
-    text-align: left;
-    color: #a9aaad;
+    color: #6a696a;
 }
 
 .top-image-list {
-     box-shadow: 0 10px 20px 0 #d2d7e4;
+    box-shadow: 0 10px 20px 0 #d2d7e4;
 }
 
 /* Tooltip style */
@@ -425,40 +436,41 @@ margin-tơp-70 {
 
 /* Homepage style */
 .latest-work-introduce {
-    font-size: 12px;
-    font-weight: normal;
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.5;
+    line-height: 1.5;
     letter-spacing: normal;
-    text-align: left;
-    color: #a9aaad;
+    color: #6a696a;
 }
 
 .work-grid-padding {
-    padding: 18px 15px!important;
+    padding: 18px 15px !important;
 }
 
 .work-grid-shadow {
-  box-shadow: 0 10px 20px 0 #d2d7e4;
+    box-shadow: 0 10px 20px 0 #d2d7e4;
 }
 
 .more-work-btn {
-    background: black!important;
-    color: white!important;
-    width: 270px!important;
-    height: 70px!important;
+    background: black !important;
+    color: white !important;
+    width: 270px !important;
+    height: 70px !important;
 }
 
 .statistic-title {
+    font-family: Montserrat;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
     letter-spacing: 1px;
     text-align: left;
-    color: #a9aaad;
+    color: #6a696a;
 }
 
 .statistic-font {
@@ -473,17 +485,18 @@ margin-tơp-70 {
 }
 
 .about-me-description {
-    font-size: 14px;
-    font-weight: normal;
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.14;
+    line-height: 1.5;
     letter-spacing: normal;
-    text-align: left;
-    color: #a9aaad;
+    color: #6a696a;
 }
 
 .homepage-contact-me-title {
+    font-family: Montserrat;
     font-size: 48px;
     font-weight: 600;
     font-style: normal;
@@ -495,6 +508,7 @@ margin-tơp-70 {
 }
 
 .homepage-contact-me-intro {
+    font-family: Montserrat;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
@@ -517,25 +531,49 @@ margin-tơp-70 {
     text-transform: none;
 }
 
-.hero-area-1-message {
-    font-size: 12px;
+.homepage-hero-area-title {
+    font-family: Montserrat;
+    font-size: 75px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.07;
+    letter-spacing: 1.2px;
+    color: #000000;
+}
+
+.homepage-hero-area-intro {
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 24px;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.5;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.hero-area-1-message {
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
     letter-spacing: normal;
-    text-align: left;
-    color: #a9aaad;
+    color: #6a696a;
 }
 
 .height-unset {
-    height: unset!important
+    height: unset !important
 }
 
 .skill-icon {
     width: 80px;
     height: 80px;
-    color: #b2b2b2!important;
+    color: #b2b2b2 !important;
     font-size: 45px;
     background-color: white;
 }
@@ -577,7 +615,7 @@ margin-tơp-70 {
 /* Homepage Responsove style */
 @media screen and (max-width: 1100px) {
     .none-background-image {
-        background: white!important;
+        background: white !important;
     }
 }
 

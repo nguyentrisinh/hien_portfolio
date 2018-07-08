@@ -13,6 +13,10 @@ Primary use:    MultiPurpose Template
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700);
 /*@import url(https://fonts.googleapis.com/css?family=Dosis:300,400,700);*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,700);
+@font-face {
+  font-family: 'SFUIText';
+  src: url('../fonts/SFUIText-Regular.ttf') format('truetype') /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 /*------------------------------------------------------------------
 [Table of contents]
@@ -363,6 +367,7 @@ body{
     font-size: 14px;
     /*font-family: "Open Sans", arial, sans-serif;*/
     font-family: Montserrat, arial, sans-serif;
+    /*font-family: SFUIText, arial, sans-serif;*/
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -448,6 +453,7 @@ hr.black{
 .font-alt{
     /*font-family: Dosis, arial, sans-serif;*/
     font-family: Montserrat, arial, sans-serif;
+    /*font-family: SFUIText, arial, sans-serif;*/
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -1479,6 +1485,7 @@ a.btn-mod:focus{
 a.logo:hover{
     /*font-family: Dosis, arial, sans-serif;*/
     font-family: Montserrat, arial, sans-serif;
+    /*font-family: SFUIText, arial, sans-serif;*/
     font-size: 18px;
     font-weight: 400 !important;
     text-transform: uppercase;
